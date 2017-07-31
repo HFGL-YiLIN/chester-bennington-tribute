@@ -1,0 +1,275 @@
+/*==========================
+basic CSS
+==========================*/
+
+
+body,
+html {
+    height: 100%;
+    margin: 0; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*==========================
+header
+==========================*/
+
+#header {
+    position: relative;
+    display: block;
+    height: 106em; /*img wont be covered*/ 
+    /*width: 100%;*/
+    margin: 0 auto;
+    background-image: url(../img/chester-ps-6.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title, #year {
+    position: absolute;
+    margin: 35% 0 0 2.5%;
+    /*background-color: red; */
+    /*border: 1px dashed red;*/
+       
+}
+
+.title h1 {
+    /*margin: 0 auto; */
+    /*font-size: 4em;*/
+    font-family: 'Anton', sans-serif;
+    /*width: 100%;*/
+    /*text-align: center; */
+    color: #F9FBE7;
+    /*border: 1px dashed green;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*margin: 50% 10% 0 10%;*/
+    margin: 0;
+    line-height: 90%;
+ /*transition: opacity 3.5s ease-in;  */
+    /*opacity: 0;*/
+}
+
+.title h2 {
+    /*position: absolute;*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4em;
+    color: #FFFF00; 
+    /*font-weight: bolder;*/
+    margin: 0;
+    line-height: 85%;
+    /*border: 1px dashed green;*/
+}
+
+#header .year {
+    margin: 53% 0 0 2.5%; 
+}
+
+.year span {
+    display: block;
+}
+
+.year .line-1 {
+    font-family: 'Anton', sans-serif;
+        font-size: 2.5em; 
+    color: #F9FBE7;
+    margin: 0;
+    line-height: 90%;
+
+}
+
+.year .line-2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.5em; 
+    color: #FFFF00;
+    margin: 0;
+    line-height: 80%;
+
+}
+
+.rotate-title-fix {
+    display: block;
+}
+
+.rotate-title-ro {
+    display: inline-block;
+}
+
+
+
+/*#bg::before {
+    content: "WE";
+    position: absolute;
+    margin: 90% 0 0 2.5%;
+    border: 1px dashed green;
+}*/
+
+
+/*.we {
+    position: absolute;
+    margin: 90% 0 0 2.5%;
+
+    border: 1px dashed green; 
+}*/
+
+
+/*==========================
+parallel scrolling
+==========================*/
+
+.bg-img-1, .bg-img-2, .bg-img-3 {
+    position: relative;
+    /*opacity: 0.6; */
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.bg-img-1 {
+    background-image: url("../img/ariz-ps-3.jpg"); 
+    min-height: 600px; 
+}
+
+.bg-img-2 {
+    background-image: url("../img/divorce-ps-3.jpg"); 
+    min-height: 600px; 
+}
+
+.bg-img-3 {
+    background-image: url("../img/divorce-ps-2.jpg"); 
+    min-height: 600px; 
+}
+
+.bar{
+    text-align: center; 
+    text-align: justify;
+    padding: 45px 70px; 
+
+}
+
+.bar-1 {
+    background-color: gray; 
+    color: #050505; 
+}
+
+.bar-1 h2 {
+    text-align: center;
+    letter-spacing: 9px;
+    font-family: "Lato", sans-serif;
+}
+
+.bar-2, .bar-3 {
+        color: #ddd; 
+background: linear-gradient(#050505, black);
+}
+
+.bg-img-1 .floatY{
+    font-family: "Lato", sans-serif;
+    font-weight: bold; 
+float: left; 
+/*width: 0.7em; */
+font-size: 2em; 
+/*padding: 2px; */
+margin: 22px 14px 0 0; 
+line-height: 75%; 
+color: #FFFF00; 
+}
+
+.bg-img-1 p {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    margin: 0 auto; 
+    padding-top: 60px;
+    color: #f7f7f7; 
+    width: 800px; 
+    font-size: 2em; 
+}
+
+
+
+
+
+
+
+/*==========================
+carousel 
+==========================*/
+
+#time-line {
+    /*background-color: rgba(0, 0, 15, 1);*/
+    /*background: linear-gradient(#050505, black);*/
+    /*height: 50em;*/
+    height: 100%; 
+}
+
+.title-el {
+    text-align: center; 
+    width: 100%; 
+    color: #F9FBE7; 
+    /*position: absolute;*/
+   padding-top: 200px; 
+}
+
+.list-el {
+    color: white; 
+    border: 1px dashed green; 
+    position: relative;
+}
+
+.carousel-img {
+    width: 100%;
+}
+
+.carousel-video {
+    width: 100%; 
+}
+
+/*==========================
+media query
+==========================*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 2000px) {
+    #header h1 {
+        font-size: 6em;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .title {
+        margin: 30% 0 0 0;
+    }
+    #header h1 {
+        font-size: 5em;
+    }
+    #header h2 {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        margin: 20% 0 0 0;
+    }
+    #header h1 {
+        font-size: 4em;
+    }
+    #header h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #header h1 {
+        font-size: 3em;
+    }
+}
