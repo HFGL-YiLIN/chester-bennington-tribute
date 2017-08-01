@@ -2,11 +2,10 @@
 basic CSS
 ==========================*/
 
-
 body,
 html {
     height: 100%;
-    margin: 0; 
+    margin: 0;
 }
 
 * {
@@ -21,7 +20,8 @@ header
 #header {
     position: relative;
     display: block;
-    height: 106em; /*img wont be covered*/ 
+    height: 140em;
+    /*img wont be covered*/
     /*width: 100%;*/
     margin: 0 auto;
     background-image: url(../img/chester-ps-6.png);
@@ -31,12 +31,12 @@ header
     background-attachment: fixed;
 }
 
-.title, #year {
+.title,
+.year {
     position: absolute;
     margin: 35% 0 0 2.5%;
     /*background-color: red; */
     /*border: 1px dashed red;*/
-       
 }
 
 .title h1 {
@@ -52,7 +52,7 @@ header
     /*margin: 50% 10% 0 10%;*/
     margin: 0;
     line-height: 90%;
- /*transition: opacity 3.5s ease-in;  */
+    /*transition: opacity 3.5s ease-in;  */
     /*opacity: 0;*/
 }
 
@@ -60,7 +60,7 @@ header
     /*position: absolute;*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 4em;
-    color: #FFFF00; 
+    color: #FFFF00;
     /*font-weight: bolder;*/
     margin: 0;
     line-height: 85%;
@@ -68,7 +68,7 @@ header
 }
 
 #header .year {
-    margin: 53% 0 0 2.5%; 
+    margin: 93% 0 0 2.5%;
 }
 
 .year span {
@@ -77,20 +77,18 @@ header
 
 .year .line-1 {
     font-family: 'Anton', sans-serif;
-        font-size: 2.5em; 
+    font-size: 2.5em;
     color: #F9FBE7;
     margin: 0;
     line-height: 90%;
-
 }
 
 .year .line-2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 1.5em; 
+    font-size: 1.5em;
     color: #FFFF00;
     margin: 0;
     line-height: 80%;
-
 }
 
 .rotate-title-fix {
@@ -100,7 +98,6 @@ header
 .rotate-title-ro {
     display: inline-block;
 }
-
 
 
 /*#bg::before {
@@ -120,43 +117,59 @@ header
 
 
 /*==========================
-parallel scrolling
+early-life
 ==========================*/
 
-.bg-img-1, .bg-img-2, .bg-img-3 {
+.bg-img-1,
+.bg-img-2,
+.bg-img-3 {
     position: relative;
-    /*opacity: 0.6; */
-    background-attachment: fixed; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-img-1 {
-    background-image: url("../img/ariz-ps-3.jpg"); 
-    min-height: 600px; 
+    background-image: url("../img/ariz-ps-31.jpg");
+    min-height: 600px;
 }
 
 .bg-img-2 {
-    background-image: url("../img/divorce-ps-3.jpg"); 
-    min-height: 600px; 
+    background-image: url("../img/1.jpg");
+    min-height: 600px;
 }
 
 .bg-img-3 {
-    background-image: url("../img/divorce-ps-2.jpg"); 
-    min-height: 600px; 
+    background-image: url("../img/divorce-ps-22.jpg");
+    min-height: 600px;
 }
 
-.bar{
-    text-align: center; 
-    text-align: justify;
-    padding: 45px 70px; 
+.bar {
+    padding: 40px 70px;
+}
 
+.bar p {
+    font-size: 1.6em;
+    width: 75%;
+    color: #757575;
+    margin: 0 auto;
+    /*border: 1px solid green;*/
+    line-height: 210%;
+}
+
+.bar .floatY {
+    float: right;
+    font-size: 1.5em;
+    padding: 30px 0 0 120px;
+    line-height: 75%;
+    color: #f7f7f7;
 }
 
 .bar-1 {
-    background-color: gray; 
-    color: #050505; 
+    padding: 25px 70px;
+    background-color: gray;
+    color: #050505;
 }
 
 .bar-1 h2 {
@@ -165,37 +178,55 @@ parallel scrolling
     font-family: "Lato", sans-serif;
 }
 
-.bar-2, .bar-3 {
-        color: #ddd; 
-background: linear-gradient(#050505, black);
+.bar-2,
+.bar-3 {
+    color: #ddd;
+    background: linear-gradient(#050505, black);
 }
 
-.bg-img-1 .floatY{
+.floatY {
     font-family: "Lato", sans-serif;
-    font-weight: bold; 
-float: left; 
-/*width: 0.7em; */
-font-size: 2em; 
-/*padding: 2px; */
-margin: 22px 14px 0 0; 
-line-height: 75%; 
-color: #FFFF00; 
+    font-weight: bold;
 }
 
-.bg-img-1 p {
+.bg-img .floatY {
+    float: left;
+    /*width: 0.7em; */
+    font-size: 2em;
+    /*padding: 2px; */
+    margin: 22px 14px 0 0;
+    line-height: 75%;
+    color: #FFEA00;
+}
+
+.bg-img p {
     font-family: "Roboto", sans-serif;
     text-align: justify;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding-top: 60px;
-    color: #f7f7f7; 
-    width: 800px; 
-    font-size: 2em; 
+    color: #f7f7f7;
+    width: 855px;
+    font-size: 2em;
 }
 
+.bg-img-2 p {
+   padding-top: 200px;
+}
 
+.bg-img-3 p {
+    padding-top: 100px;
+    width: 950px;
+}
 
+#early-life a {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: #E6EE9C;
+}
 
-
+#early-life a:hover {
+    color: #FFAB91;
+}
 
 
 /*==========================
@@ -206,20 +237,20 @@ carousel
     /*background-color: rgba(0, 0, 15, 1);*/
     /*background: linear-gradient(#050505, black);*/
     /*height: 50em;*/
-    height: 100%; 
+    height: 100%;
 }
 
 .title-el {
-    text-align: center; 
-    width: 100%; 
-    color: #F9FBE7; 
+    text-align: center;
+    width: 100%;
+    color: #F9FBE7;
     /*position: absolute;*/
-   padding-top: 200px; 
+    padding-top: 200px;
 }
 
 .list-el {
-    color: white; 
-    border: 1px dashed green; 
+    color: white;
+    border: 1px dashed green;
     position: relative;
 }
 
@@ -228,8 +259,9 @@ carousel
 }
 
 .carousel-video {
-    width: 100%; 
+    width: 100%;
 }
+
 
 /*==========================
 media query

@@ -1,27 +1,3 @@
-//  $(document).ready(function ($) {
-//        var controller = new ScrollMagic();
-//         var blockTween = TweenMax.to('.title h1', 1.5, {
-//         backgroundColor: 'red'
-//     });
-
-//     var containerScene = new ScrollScene({
-//             triggerElement: '#title',
-//             triggerHook: 'onLeave',
-//             duration: 350,
-//             offset: 200
-//         })
-//         .setTween(blockTween)
-//         .addTo(controller);
-//                 containerScene.addIndicators({zindex: 100})
-
-// /*    var containerScene = new ScrollMagic.Scene({
-//             triggerElement: '#container',
-//             duration: 500
-//         })
-//         .setPin('#block')
-//         .addIndicators()
-//         .addTo(controller); */  
-// }); 
 $(document).ready(function ($) {
     // document.getElementById('t-chester').style.opacity = 1;
     // var heightH = $('#header').height(); 
@@ -31,16 +7,18 @@ $(document).ready(function ($) {
     // $ol.width(widthH); 
     // $('#overlay').css({'height': $('#header').innerHeight()}); 
 
+
+
     var $tChester = $("#t-chester");
     var tweenS1Title = new TimelineMax()
-        .fromTo($tChester, 2.5, {
+        .fromTo('.rotate-title-fix', 2.5, {
             opacity: 0
         }, {
             opacity: 1,
             ease: Power1.easeIn
         })
         .from($tChester, 1.5, {
-            y: '-= 180'
+            y: '-= 120'
         });
 
 
@@ -89,7 +67,7 @@ $(document).ready(function ($) {
 
     var tweenS1Fadeo1 = new TweenMax.to(".title", 0.1, {
         autoAlpha: 0,
-        y: 160,
+        y: 400,
         scale: 0.7,
         force3D: true
     });
@@ -101,17 +79,18 @@ $(document).ready(function ($) {
         force3D: true
     });
 
-    var tweenS1Fadei = new TweenMax.fromTo(".year", 0.8, {
+    var tweenS1Fadei = new TweenMax.fromTo(".year", 0.3, {
         opacity: 0
     }, {
-        opacity: 1
+        opacity: 1,
+        ease: Power1.easeIn
     });
 
     var sceneS1Fadeo1 = new ScrollMagic.Scene({
             triggerElement: '#header',
-            duration: 180,
+            duration: 380,
             triggerHook: 'onLeave',
-            offset: 0
+            offset: 50
         })
         .setTween(tweenS1Fadeo1)
         .addIndicators()
@@ -120,7 +99,7 @@ $(document).ready(function ($) {
     var sceneS1Fadei = new ScrollMagic.Scene({
             triggerElement: '#header',
             triggerHook: 'onLeave',
-            offset: 190
+            offset: 520
         })
         .setTween(tweenS1Fadei)
         .addIndicators()
@@ -131,28 +110,100 @@ $(document).ready(function ($) {
             triggerElement: '#header',
             duration: 420,
             triggerHook: 'onLeave',
-            offset: 230
+            offset: 650
         })
         .setTween(tweenS1Fadeo2)
         .addIndicators()
         .addTo(controllerS1);
 
-    //parallel scrolling 
+    //early-life 
     // var tweenFadeinPs = new TweenMax.fromTo(".fadeIn-1", 3, {opacity: 0}, {opacity: 1}); 
-    var tweenFadeinPs = new TweenMax.fromTo(".fadeIn-1", 1.5, {
+    //
+    var tweenFadeinEl1 = new TweenMax.fromTo(".fadeIn-1", 0.5, {
         opacity: 0
     }, {
         opacity: 1,
         ease: Power1.easeIn
     });
 
-    var scenefadeInPs = new ScrollMagic.Scene({
+    var sceneFadeinEl1 = new ScrollMagic.Scene({
             triggerElement: '.bar-1',
-            triggerHook: 'onLeave'
+            triggerHook: 'onLeave',
+            offset: -150
         })
-        .setTween(tweenFadeinPs)
+        .setTween(tweenFadeinEl1)
         .addIndicators()
         .addTo(controllerS1);
+
+    var tweenFadeinEl2 = new TweenMax.fromTo(".fadeIn-2", 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power1.easeIn
+    });
+
+    var sceneFadeinEl2 = new ScrollMagic.Scene({
+            triggerElement: '.bar-2',
+            triggerHook: 'onLeave',
+            offset: -450
+        })
+        .setTween(tweenFadeinEl2)
+        .addIndicators()
+        .addTo(controllerS1);
+
+//
+var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power1.easeIn
+    });
+
+    var sceneFadeinEl3 = new ScrollMagic.Scene({
+            triggerElement: '.bar-2',
+            triggerHook: 'onLeave',
+            offset: 0
+        })
+        .setTween(tweenFadeinEl3)
+        .addIndicators()
+        .addTo(controllerS1);
+
+    var tweenFadeinEl4 = new TweenMax.fromTo(".fadeIn-4", 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power1.easeIn
+    });
+
+    var sceneFadeinEl4 = new ScrollMagic.Scene({
+            triggerElement: '.bar-3',
+            triggerHook: 'onLeave',
+            offset: -450
+        })
+        .setTween(tweenFadeinEl4)
+        .addIndicators()
+        .addTo(controllerS1);
+
+    var tweenFadeinEl5 = new TweenMax.fromTo(".fadeIn-5", 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power1.easeIn
+    });
+
+    var sceneFadeinEl5 = new ScrollMagic.Scene({
+            triggerElement: '.bar-3',
+            triggerHook: 'onLeave',
+            offset: 0
+        })
+        .setTween(tweenFadeinEl5)
+        .addIndicators()
+        .addTo(controllerS1);
+
+
+
+
+
 
 
 
