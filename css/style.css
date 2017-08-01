@@ -131,17 +131,17 @@ early-life
 }
 
 .bg-img-1 {
-    background-image: url("../img/ariz-ps-31.jpg");
+    background-image: url("../img/bg-1.jpg");
     min-height: 600px;
 }
 
 .bg-img-2 {
-    background-image: url("../img/1.jpg");
+    background-image: url("../img/bg-2.jpg");
     min-height: 600px;
 }
 
 .bg-img-3 {
-    background-image: url("../img/divorce-ps-22.jpg");
+    background-image: url("../img/bg-3.jpg");
     min-height: 600px;
 }
 
