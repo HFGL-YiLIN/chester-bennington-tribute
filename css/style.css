@@ -132,17 +132,17 @@ early-life
 
 .bg-img-1 {
     background-image: url("../img/bg-1.jpg");
-    min-height: 600px;
+    min-height: 750px;
 }
 
 .bg-img-2 {
     background-image: url("../img/bg-2.jpg");
-    min-height: 600px;
+    min-height: 750px;
 }
 
 .bg-img-3 {
     background-image: url("../img/bg-3.jpg");
-    min-height: 600px;
+    min-height: 750px;
 }
 
 .bar {
@@ -166,13 +166,18 @@ early-life
     color: #f7f7f7;
 }
 
-.bar-1 {
+.bar-title {
     padding: 25px 70px;
     background-color: gray;
     color: #050505;
 }
 
-.bar-1 h2 {
+.bar-4 {
+    background-color: #f7f7f7;
+    color: #050505;
+}
+
+.bar-title h2 {
     text-align: center;
     letter-spacing: 9px;
     font-family: "Lato", sans-serif;
@@ -210,12 +215,11 @@ early-life
 }
 
 .bg-img-2 p {
-   padding-top: 200px;
+    padding-top: 200px;
 }
 
 .bg-img-3 p {
-    padding-top: 100px;
-    width: 950px;
+    padding-top: 150px;
 }
 
 #early-life a {
@@ -226,6 +230,110 @@ early-life
 
 #early-life a:hover {
     color: #FFAB91;
+}
+
+
+/*============================
+career
+=============================*/
+
+.container-pin {
+   /* width: 100%;  */
+  height: 1000px;
+position: relative;
+   overflow: hidden; 
+}
+
+.slide {
+  height: 100%;
+   width: 100%;  
+
+  position: absolute;
+}
+
+/* .slide-bgim {
+    background-image: url("../img/chester-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#slide-c-1, #slide-c-2, #slide-c-3, #slide-c-4 {
+  padding: 0; 
+overflow: hidden; 
+max-height: 800px; 
+position: relative; 
+      width: 100%;  
+    /* background-color: black; */
+}
+
+.carousel-img {
+    width: 100%;
+}
+
+.carousel-video {
+    width: 100%;
+}
+
+
+/* Carousel indicator */
+.container-carousel .carousel-indicators {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+.container-carousel .carousel-indicators li {
+    text-indent: initial;
+    width: 15%;
+    height: 5px;
+    margin: 0 2% 0 0;
+    border-radius: 0;
+    background: black;
+    border: none;
+    opacity: 0.4;
+}
+
+.container-carousel .carousel-indicators li:last-child {
+    margin: 0;
+}
+
+.container-carousel .carousel-indicators li.active {
+    opacity: 1;
+    position: relative;
+}
+
+.container-carousel .carousel-indicators li.active:after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #f38181;
+}
+.container-carousel .carousel-indicators li:hover{
+	opacity: 1;
+}
+
+.container-carousel .indicator-inner {
+    padding-top: 25px;
+    text-align: left;
+}
+
+.container-carousel .indicator-inner span {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.container-carousel .indicator-inner span.number {
+    font-size: 23px;
+    font-weight: 500;
+    margin-right: 10px;
+
 }
 
 

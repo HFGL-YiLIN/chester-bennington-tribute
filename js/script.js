@@ -8,7 +8,7 @@ $(document).ready(function ($) {
     // $('#overlay').css({'height': $('#header').innerHeight()}); 
 
 
-
+//fixed title
     var $tChester = $("#t-chester");
     var tweenS1Title = new TimelineMax()
         .fromTo('.rotate-title-fix', 2.5, {
@@ -21,9 +21,9 @@ $(document).ready(function ($) {
             y: '-= 120'
         });
 
-
+//rotate title
     $(function () {
-        //rotate title
+        
         var t = ["TALENT", "SUPERSTAR", "FATHER", "HUSBAND", "CHARITARIAN", "PATNER"],
             $h1 = $(".rotate-title"),
             $sp = $h1.find(".rotate-title-ro"),
@@ -200,6 +200,50 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         .addIndicators()
         .addTo(controllerS1);
 
+//career 
+// define movement of panels
+  var wipeAnimation = new TimelineMax()
+    .fromTo(".slide-b", 1, {
+      x: "-100%"
+    }, {
+      x: "0%",
+      ease: Linear.easeNone
+    }) // in from left
+    .fromTo(".slide-c", 1, {
+      x: "100%"
+    }, {
+      x: "0%",
+      ease: Linear.easeNone
+    }) // in from right
+    .fromTo(".slide-d", 1, {
+      y: "-100%"
+    }, {
+      y: "0%",
+      ease: Linear.easeNone
+    }); // in from top
+
+  // create scene to pin and link animation
+  var scene = new ScrollMagic.Scene({
+      triggerElement: ".container-pin",
+      triggerHook: "onLeave",
+      duration: "300%", 
+      offset: 0
+    })
+    .setPin(".container-pin")
+    .setTween(wipeAnimation)
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controllerS1);
+
+
+var tweenZidx = new TweenMax.set(".layer-1", {zIndex:-1}); 
+var sceneZidx = new ScrollMagic.Scene({
+  triggerElement: ".container-pin",
+  triggerHook: "onLeave",
+  offset: 30
+})
+.setTween(tweenZidx)
+.addIndicators()
+.addTo(controllerS1); 
 
 
 
