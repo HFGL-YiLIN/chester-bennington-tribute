@@ -204,17 +204,17 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
 // define movement of panels
   var wipeAnimation = new TimelineMax()
     .fromTo(".slide-b", 1, {
-      x: "-100%"
-    }, {
-      x: "0%",
-      ease: Linear.easeNone
-    }) // in from left
-    .fromTo(".slide-c", 1, {
       x: "100%"
     }, {
       x: "0%",
       ease: Linear.easeNone
     }) // in from right
+    .fromTo(".slide-c", 1, {
+      x: "-100%"
+    }, {
+      x: "0%",
+      ease: Linear.easeNone
+    }) // in from left
     .fromTo(".slide-d", 1, {
       y: "-100%"
     }, {
@@ -226,8 +226,8 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
   var scene = new ScrollMagic.Scene({
       triggerElement: ".container-pin",
       triggerHook: "onLeave",
-      duration: "300%", 
-      offset: 0
+      duration: "340%", 
+      offset: 60
     })
     .setPin(".container-pin")
     .setTween(wipeAnimation)
@@ -239,7 +239,7 @@ var tweenZidx = new TweenMax.set(".layer-1", {zIndex:-1});
 var sceneZidx = new ScrollMagic.Scene({
   triggerElement: ".container-pin",
   triggerHook: "onLeave",
-  offset: 30
+  offset: 60
 })
 .setTween(tweenZidx)
 .addIndicators()
@@ -279,7 +279,7 @@ var sceneZidx = new ScrollMagic.Scene({
 
     //others-section-2
     $('.carousel').carousel({
-        interval: 1000 * 10
+        interval: 10000000 * 10
     });
 
 });

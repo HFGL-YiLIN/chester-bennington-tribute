@@ -41,7 +41,7 @@ header
 
 .title h1 {
     /*margin: 0 auto; */
-    /*font-size: 4em;*/
+    font-size: 7em;
     font-family: 'Anton', sans-serif;
     /*width: 100%;*/
     /*text-align: center; */
@@ -59,7 +59,7 @@ header
 .title h2 {
     /*position: absolute;*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4em;
+    font-size: 5em;
     color: #FFFF00;
     /*font-weight: bolder;*/
     margin: 0;
@@ -68,7 +68,7 @@ header
 }
 
 #header .year {
-    margin: 93% 0 0 2.5%;
+    margin: 85% 0 0 2.5%;
 }
 
 .year span {
@@ -173,7 +173,7 @@ early-life
 }
 
 .bar-4 {
-    background-color: #f7f7f7;
+    background-color: gray;
     color: #050505;
 }
 
@@ -239,7 +239,7 @@ career
 
 .container-pin {
    /* width: 100%;  */
-  height: 1000px;
+  height: 1100px;
 position: relative;
    overflow: hidden; 
 }
@@ -261,7 +261,7 @@ position: relative;
 #slide-c-1, #slide-c-2, #slide-c-3, #slide-c-4 {
   padding: 0; 
 overflow: hidden; 
-max-height: 800px; 
+max-height: 1100px; 
 position: relative; 
       width: 100%;  
     /* background-color: black; */
@@ -269,19 +269,65 @@ position: relative;
 
 .carousel-img {
     width: 100%;
+    height: 1000px; 
 }
 
 .carousel-video {
     width: 100%;
 }
 
+#cc-1 {
+    bottom: 290px;
+}
+
+#cc-2 {
+    bottom: 370px;
+}
+
+.carousel-caption span {
+    font-family: 'Lobster', cursive; 
+    /*float: left;*/
+    font-size: 2em;
+    /*margin: 6px 8px 0 0;*/
+    /*line-height: 100%;*/
+    color: #FFEA00;
+
+}
+
+.carousel-caption h3, .carousel-caption h4 {
+     text-align: justify;
+     /*padding-top: 200px;
+    margin-left: -300px; */
+    width: 350px; 
+    font-family: 'Quicksand', sans-serif;
+}
+
+#cc-2 h3 {
+    width: 480px; 
+    line-height: 2em; 
+}
+
+.carousel-caption  h3 {
+font-size: 1.5em; 
+line-height: 1.8em; 
+}
+
+.gap-1 {
+    height: 70px; 
+}
+
+
+
 
 /* Carousel indicator */
 .container-carousel .carousel-indicators {
+    position: absolute;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: -0;
     left: 0;
+    /*top: 0;*/
+    bottom: 88%;
 }
 
 .container-carousel .carousel-indicators li {
@@ -378,7 +424,7 @@ media query
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (max-width: 2000px) {
+/*@media only screen and (max-width: 2000px) {
     #header h1 {
         font-size: 6em;
     }
@@ -412,4 +458,33 @@ media query
     #header h1 {
         font-size: 3em;
     }
+}*/
+
+@media screen and (min-width: 768px) {
+#cc-1 {
+    left: 2.1%;
 }
+
+#cc-2 {
+    left: 69%;
+}
+
+/*carousel left arrow */
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -125px !important;  
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev {
+    margin-right: -115px !important; 
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+    margin-top: -55px !important; 
+}
+
+
+
+
+
+
+}; 
