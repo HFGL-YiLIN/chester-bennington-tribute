@@ -283,6 +283,9 @@ position: relative;
 #cc-2 {
     bottom: 370px;
 }
+#cc-3 {
+    bottom: 550px; 
+}
 
 .carousel-caption span {
     font-family: 'Lobster', cursive; 
@@ -305,6 +308,10 @@ position: relative;
 #cc-2 h3 {
     width: 480px; 
     line-height: 2em; 
+}
+
+#cc-3 h3 {
+    width: 430px; 
 }
 
 .carousel-caption  h3 {
@@ -467,6 +474,10 @@ media query
 
 #cc-2 {
     left: 69%;
+}
+
+#cc-3 {
+    left: 6%; 
 }
 
 /*carousel left arrow */
