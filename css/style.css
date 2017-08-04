@@ -272,9 +272,11 @@ position: relative;
     height: 1000px; 
 }
 
-.carousel-video {
+/*.carousel-video {
     width: 100%;
-}
+}*/
+
+
 
 #cc-1 {
     bottom: 290px;
@@ -285,6 +287,22 @@ position: relative;
 }
 #cc-3 {
     bottom: 550px; 
+}
+
+.wrapper-v {
+    height: 1000px; 
+        background-image: url(../img/bg-slide-ps-1-4-2.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.v-1 {
+    width: 760px;
+    height: 412px;  
+    display: block; 
+    margin: 0 auto;
+    /*position: relative;on: absolute;*/
 }
 
 .carousel-caption span {
@@ -323,7 +341,9 @@ line-height: 1.8em;
     height: 70px; 
 }
 
-
+.gap-2 {
+    height: 30%;
+}
 
 
 /* Carousel indicator */
@@ -387,40 +407,6 @@ line-height: 1.8em;
     font-weight: 500;
     margin-right: 10px;
 
-}
-
-
-/*==========================
-carousel 
-==========================*/
-
-#time-line {
-    /*background-color: rgba(0, 0, 15, 1);*/
-    /*background: linear-gradient(#050505, black);*/
-    /*height: 50em;*/
-    height: 100%;
-}
-
-.title-el {
-    text-align: center;
-    width: 100%;
-    color: #F9FBE7;
-    /*position: absolute;*/
-    padding-top: 200px;
-}
-
-.list-el {
-    color: white;
-    border: 1px dashed green;
-    position: relative;
-}
-
-.carousel-img {
-    width: 100%;
-}
-
-.carousel-video {
-    width: 100%;
 }
 
 
