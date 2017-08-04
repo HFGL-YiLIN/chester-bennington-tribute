@@ -162,7 +162,7 @@
     <div class="wrapper-v">
         <div class="gap-2"></div>
     <!--<iframe class="carousel-video" height="500" src="https://www.youtube.com/embed/Gd9OhYroLN0?list=PLgwUvJ_atkZIzs0-MA5KVEh9YtwdCRQ5C" frameborder="0" allowfullscreen></iframe>-->
-    <iframe class="carousel-video v-1" id="v-1" src="https://www.youtube.com/embed/videoseries?list=PLgwUvJ_atkZIzs0-MA5KVEh9YtwdCRQ5C" frameborder="0" allowfullscreen></iframe>
+    <iframe class="carousel-video v-1" id="v-1" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLgwUvJ_atkZIzs0-MA5KVEh9YtwdCRQ5C" frameborder="0" allowfullscreen></iframe>
     <div class="carousel-caption" id="cc-4">
         <h3><span></span></h3>
     </div>
@@ -171,17 +171,18 @@
                             </div>
 
                             <!--Left right controls-->
-                            <a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
+                            <a class="left carousel-control" href="#carousel-1" onclick="callPlayer('current','pauseVideo')" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-                            <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next">
+                            <a class="right carousel-control" href="#carousel-1" onclick="callPlayer('current','pauseVideo')" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Previous</span>
         </a>
                         </div>
                     </div>
                 </div>
+                 </div>
             </section>
 
             <section class="slide slide-b">

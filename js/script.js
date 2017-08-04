@@ -280,8 +280,8 @@ var sceneZidx = new ScrollMagic.Scene({
     //others-section-2
     $('.carousel').carousel({
         interval: 10000000 * 10
-    }).on('slide.bs.carousel', function () {
-  document.getElementById('v-1').pause();
     });
+
+
 
 });
