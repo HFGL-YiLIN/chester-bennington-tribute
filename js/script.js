@@ -270,18 +270,72 @@ var sceneZidx = new ScrollMagic.Scene({
     // .addIndicators()
     // .addTo(controllerS1);
 
+//stop when scroll away 
+var sceneStopifame = new ScrollMagic.Scene({
+    triggerElement: '.container-pin', 
+    triggerHook: 'onLeave',
+    offset: 300
+})
+.addIndicators()
+.addTo(controllerS1)
+.on("enter leave", function(){
 
-
-
-
-
-
-
-    //others-section-2
-    $('.carousel').carousel({
-        interval: 10000000 * 10
+$('iframe').each(function (index) {
+$(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
     });
 
+// $('iframe').each(function(index) {
+//         $(this).attr('src', $(this).attr('src'));
+//         return false;
+
+// });  
+});
+
+
+var sceneStopifame2 = new ScrollMagic.Scene({
+    triggerElement: '.container-pin', 
+    triggerHook: 'onLeave',
+    offset: 500
+})
+.addIndicators()
+.addTo(controllerS1)
+.on("enter leave", function(){
+
+$('iframe').each(function (index) {
+$(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
+    });
+
+// $('iframe').each(function(index) {
+//         $(this).attr('src', $(this).attr('src'));
+//         return false;
+
+// });  
+});
+
+
+
+
+//start the slider
+    $(".slick").slick({
+      infinite: true,
+      arrows: false,
+      dots: true,
+      fade: true, 
+      speed: 500, 
+      cssEase: 'linear'
+    });
+
+//stop when switch carousel 
+// $('.slick').on('afterChange', function(event, slick){
+//     //on change slide = do action
+//     $('iframe').each(function(){
+//         $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
+//     });
+// }).slick();
+
+
+    //run the fitVids jQuery plugin to ensure the iframes stay within the item.
+    // $('.item').fitVids();
 
 
 });
