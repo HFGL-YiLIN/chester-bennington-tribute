@@ -202,37 +202,31 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
 
 //career 
 // define movement of panels
-  var wipeAnimation = new TimelineMax()
-    .fromTo(".slide-b", 1, {
-      x: "100%"
-    }, {
-      x: "0%",
-      ease: Linear.easeNone
-    }) // in from right
-    .fromTo(".slide-c", 1, {
-      x: "-100%"
-    }, {
-      x: "0%",
-      ease: Linear.easeNone
-    }) // in from left
-    .fromTo(".slide-d", 1, {
-      y: "-100%"
-    }, {
-      y: "0%",
-      ease: Linear.easeNone
-    }); // in from top
+  // define movement of slides
+		var tweenSlide = new TimelineMax()
+			// animate to second slide
+			.to(".container-scrollslide", 0.5, {z: -150})		// move back in 3D space
+			.to(".container-scrollslide", 1,   {x: "-25%"})	// move in to first slide
+			.to(".container-scrollslide", 0.5, {z: 0})				// move back to origin in 3D space
+			// animate to third slide
+			.to(".container-scrollslide", 0.5, {z: -150, delay: 1})
+			.to(".container-scrollslide", 1,   {x: "-50%"})
+			.to(".container-scrollslide", 0.5, {z: 0})
+			// animate to forth slide
+			.to(".container-scrollslide", 0.5, {z: -150, delay: 1})
+			.to(".container-scrollslide", 1,   {x: "-75%"})
+			.to(".container-scrollslide", 0.5, {z: 0});
 
-  // create scene to pin and link animation
-  var scene = new ScrollMagic.Scene({
-      triggerElement: ".container-pin",
-      triggerHook: "onLeave",
-      duration: "340%", 
-      offset: 60
-    })
-    .setPin(".container-pin")
-    .setTween(wipeAnimation)
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controllerS1);
+		// create scene to pin and link animation
+		new ScrollMagic.Scene({
+				triggerElement: ".container-pin",
+				triggerHook: "onLeave",
+				duration: "500%"
+			})
+			.setPin(".container-pin")
+			.setTween(tweenSlide)
+			.addIndicators() // add indicators (requires plugin)
+			.addTo(controllerS1);
 
 
 var tweenZidx = new TweenMax.set(".layer-1", {zIndex:-1}); 
@@ -247,34 +241,11 @@ var sceneZidx = new ScrollMagic.Scene({
 
 
 
-
-
-
-
-
-    //scrollmagic-section-2
-    // var controllerS2 = new ScrollMagic.Controller();
-
-    // var $S2Title = $("#time-line .title-el"); 
-
-    // var tweenS2Title = new TimelineMax()
-    // .fromTo($S2Title, 1, {opacity: 0}, {opacity: 1})
-    // .fromTo($S2Title, 0.7, {y: 0, x: 0}, {y: -170, x: 0}); 
-
-    // var sceneS2Title = new ScrollMagic.Scene({
-    //     triggerElement: '#time-line',
-    //     triggerHook: 'onLeave',
-    //     offset: 0
-    // })
-    // .setTween(tweenS2Title)
-    // .addIndicators()
-    // .addTo(controllerS1);
-
 //stop when scroll away 
 var sceneStopifame = new ScrollMagic.Scene({
     triggerElement: '.container-pin', 
     triggerHook: 'onLeave',
-    offset: 300
+    offset: -700
 })
 .addIndicators()
 .addTo(controllerS1)
@@ -282,13 +253,7 @@ var sceneStopifame = new ScrollMagic.Scene({
 
 $('iframe').each(function (index) {
 $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
-    });
-
-// $('iframe').each(function(index) {
-//         $(this).attr('src', $(this).attr('src'));
-//         return false;
-
-// });  
+    }); 
 });
 
 
@@ -304,12 +269,6 @@ var sceneStopifame2 = new ScrollMagic.Scene({
 $('iframe').each(function (index) {
 $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
     });
-
-// $('iframe').each(function(index) {
-//         $(this).attr('src', $(this).attr('src'));
-//         return false;
-
-// });  
 });
 
 
@@ -325,17 +284,7 @@ $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo
       cssEase: 'linear'
     });
 
-//stop when switch carousel 
-// $('.slick').on('afterChange', function(event, slick){
-//     //on change slide = do action
-//     $('iframe').each(function(){
-//         $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
-//     });
-// }).slick();
 
-
-    //run the fitVids jQuery plugin to ensure the iframes stay within the item.
-    // $('.item').fitVids();
 
 
 });
