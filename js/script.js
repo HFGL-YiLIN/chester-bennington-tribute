@@ -86,7 +86,7 @@ $(document).ready(function ($) {
         ease: Power1.easeIn
     });
 
-    var sceneS1Fadeo1 = new ScrollMagic.Scene({
+    var scene1S1Fadeo1 = new ScrollMagic.Scene({
             triggerElement: '#header',
             duration: 380,
             triggerHook: 'onLeave',
@@ -96,7 +96,7 @@ $(document).ready(function ($) {
         .addIndicators()
         .addTo(controllerS1);
 
-    var sceneS1Fadei = new ScrollMagic.Scene({
+    var scene2S1Fadei = new ScrollMagic.Scene({
             triggerElement: '#header',
             triggerHook: 'onLeave',
             offset: 520
@@ -106,7 +106,7 @@ $(document).ready(function ($) {
         .addTo(controllerS1);
 
 
-    var sceneS1Fadeo2 = new ScrollMagic.Scene({
+    var scene3S1Fadeo2 = new ScrollMagic.Scene({
             triggerElement: '#header',
             duration: 420,
             triggerHook: 'onLeave',
@@ -126,7 +126,7 @@ $(document).ready(function ($) {
         ease: Power1.easeIn
     });
 
-    var sceneFadeinEl1 = new ScrollMagic.Scene({
+    var scene4FadeinEl1 = new ScrollMagic.Scene({
             triggerElement: '.bar-1',
             triggerHook: 'onLeave',
             offset: -150
@@ -142,7 +142,7 @@ $(document).ready(function ($) {
         ease: Power1.easeIn
     });
 
-    var sceneFadeinEl2 = new ScrollMagic.Scene({
+    var scene5FadeinEl2 = new ScrollMagic.Scene({
             triggerElement: '.bar-2',
             triggerHook: 'onLeave',
             offset: -450
@@ -159,7 +159,7 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         ease: Power1.easeIn
     });
 
-    var sceneFadeinEl3 = new ScrollMagic.Scene({
+    var scene6FadeinEl3 = new ScrollMagic.Scene({
             triggerElement: '.bar-2',
             triggerHook: 'onLeave',
             offset: 0
@@ -175,7 +175,7 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         ease: Power1.easeIn
     });
 
-    var sceneFadeinEl4 = new ScrollMagic.Scene({
+    var scene7FadeinEl4 = new ScrollMagic.Scene({
             triggerElement: '.bar-3',
             triggerHook: 'onLeave',
             offset: -450
@@ -191,7 +191,7 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         ease: Power1.easeIn
     });
 
-    var sceneFadeinEl5 = new ScrollMagic.Scene({
+    var scene8FadeinEl5 = new ScrollMagic.Scene({
             triggerElement: '.bar-3',
             triggerHook: 'onLeave',
             offset: 0
@@ -205,20 +205,20 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
   // define movement of slides
 		var tweenSlide = new TimelineMax()
 			// animate to second slide
-			.to(".container-scrollslide", 0.5, {z: -150})		// move back in 3D space
+			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})		// move back in 3D space
 			.to(".container-scrollslide", 1,   {x: "-25%"})	// move in to first slide
 			.to(".container-scrollslide", 0.5, {z: 0})				// move back to origin in 3D space
 			// animate to third slide
-			.to(".container-scrollslide", 0.5, {z: -150, delay: 1})
+			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})
 			.to(".container-scrollslide", 1,   {x: "-50%"})
 			.to(".container-scrollslide", 0.5, {z: 0})
 			// animate to forth slide
-			.to(".container-scrollslide", 0.5, {z: -150, delay: 1})
+			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})
 			.to(".container-scrollslide", 1,   {x: "-75%"})
 			.to(".container-scrollslide", 0.5, {z: 0});
 
 		// create scene to pin and link animation
-		new ScrollMagic.Scene({
+		var scene9Pin = new ScrollMagic.Scene({
 				triggerElement: ".container-pin",
 				triggerHook: "onLeave",
 				duration: "500%"
@@ -230,7 +230,7 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
 
 
 var tweenZidx = new TweenMax.set(".layer-1", {zIndex:-1}); 
-var sceneZidx = new ScrollMagic.Scene({
+var scene10Zidx = new ScrollMagic.Scene({
   triggerElement: ".container-pin",
   triggerHook: "onLeave",
   offset: 60
@@ -242,7 +242,7 @@ var sceneZidx = new ScrollMagic.Scene({
 
 
 //stop when scroll away 
-var sceneStopifame = new ScrollMagic.Scene({
+var scene11Stopifame = new ScrollMagic.Scene({
     triggerElement: '.container-pin', 
     triggerHook: 'onLeave',
     offset: -700
@@ -257,7 +257,7 @@ $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo
 });
 
 
-var sceneStopifame2 = new ScrollMagic.Scene({
+var scene12Stopifame2 = new ScrollMagic.Scene({
     triggerElement: '.container-pin', 
     triggerHook: 'onLeave',
     offset: 500
