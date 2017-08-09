@@ -317,12 +317,26 @@ justify-content: center; /* align horizontal */
         bottom: 23%;
 }
 
-.v-1-1, .v-2-1, .v-3-1 {
+.row-v-3-2 {
+    left: 32%; 
+        bottom: -8%;
+}
+
+.row-v-4-1 {
+    left: 23%; 
+        bottom: -16%;
+}
+
+.row-v-4-2 {
+    left: -24%; 
+}
+
+.v-1-1, .v-2-1, .v-3-1, .v-4-2 {
     width: 40%; 
     height: 40%;
 }
 
-.v-2-2 {
+.v-2-2, .v-3-2, .v-4-1 {
         width: 30%; 
     height: 30%;
 }

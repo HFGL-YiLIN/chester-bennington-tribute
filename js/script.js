@@ -61,6 +61,17 @@ $(document).ready(function ($) {
         })();
     });
 
+//audio scroll stop/play 
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        document.getElementById("player").pause(); 
+    } else {
+        document.getElementById("player").play();  
+    }
+}
+
     //scrollmagic-section-1
     // title effect
     var controllerS1 = new ScrollMagic.Controller();
