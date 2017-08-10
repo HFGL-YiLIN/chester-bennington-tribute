@@ -66,15 +66,56 @@ window.addEventListener("scroll", myFunction);
 
 function myFunction() {
     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("player").pause(); 
+        document.getElementById("player-1").pause(); 
     } else {
-        document.getElementById("player").play();  
+        document.getElementById("player-1").play();  
     }
 }
 
+// function muteToggle(img) {
+//     if(img.src == "img/icon/unmute-2.png")
+//     {img.src = "img/icon/mute-2.png"; 
+//     documet.getElementById("player-1").pause();}
+//     else {
+//         img.src = "img/icon/unmute-2.png";
+//         document.getElementById("player-1").play();
+//     }
+
+// }
+
+$("#mute-1").click(function(){
+    if($(this).attr('src') == $(this).attr('data-src'))
+    {
+        var idx1 = $(this).attr('data-swap');
+        $(this).attr('src', idx1);
+        $('#player-1').each(function(){
+    this.pause(); 
+}); 
+    }
+    else {
+        var idx2 = $(this).attr('data-src'); 
+        $(this).attr('src', idx2); 
+        $('#player-1').each(function(){
+    this.play(); 
+});
+    }
+});
+
+    var controllerS1 = new ScrollMagic.Controller();
+    
+var sceneMutePin = new ScrollMagic.Scene({
+
+triggerElement: '#header',
+            duration: 580,
+            triggerHook: 'onLeave',
+            offset: -10
+        })
+        .setPin("#mute-1")
+        .addIndicators()
+        .addTo(controllerS1);
+
     //scrollmagic-section-1
     // title effect
-    var controllerS1 = new ScrollMagic.Controller();
 
     var tweenS1Fadeo1 = new TweenMax.to(".title", 0.1, {
         autoAlpha: 0,

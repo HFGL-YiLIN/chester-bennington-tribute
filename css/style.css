@@ -101,6 +101,12 @@ header
     display: inline-block;
 }
 
+#mute-1 {
+     width: 2%;
+     position: absolute;
+margin-top: 72%;
+margin-left: 115%;
+}
 
 /*#bg::before {
     content: "WE";

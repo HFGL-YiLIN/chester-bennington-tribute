@@ -38,10 +38,26 @@
                     </div>
 
 
-    <audio autoplay hidden id="player">
+    <audio autoplay hidden id="player-1">
      <source src="audio/Crawling - Linkin Park (Piano Cover Tribute).mp3" type="audio/mp3">
                 If you're reading this, audio isn't supported. 
     </audio>
+
+<!--<script>
+    function muteToggle(img) {
+    if(img.src == "img/icon/unmute-2.png")
+    {
+    document.getElementById('player').pause();
+    img.src = "img/icon/mute-2.png"; }
+    else {
+        
+        document.getElementById('player').play();
+        img.src = "img/icon/unmute-2.png";
+    }
+
+}
+</script>-->
+    <img id="mute-1" src="img/icon/unmute-2.png" data-swap="img/icon/mute-2.png" data-src="img/icon/unmute-2.png" alt="unmute icon" />
 
 
                 </div>
