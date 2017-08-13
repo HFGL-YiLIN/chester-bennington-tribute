@@ -1,14 +1,12 @@
 $(document).ready(function ($) {
-    // document.getElementById('t-chester').style.opacity = 1;
-    // var heightH = $('#header').height(); 
-    // var widthH = $('#header').width(); 
-    // var $ol = $('#overlay'); 
-    // $ol.height(heightH); 
-    // $ol.width(widthH); 
-    // $('#overlay').css({'height': $('#header').innerHeight()}); 
 
+    //preloader
+    $(window).ready(function () {
+        $('#status').delay(350).fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+    });
 
-//fixed title
+    //fixed title
     var $tChester = $("#t-chester");
     var tweenS1Title = new TimelineMax()
         .fromTo('.rotate-title-fix', 2.5, {
@@ -21,9 +19,9 @@ $(document).ready(function ($) {
             y: '-= 120'
         });
 
-//rotate title
+    //rotate title
     $(function () {
-        
+
         var t = ["TALENT", "SUPERSTAR", "FATHER", "HUSBAND", "CHARITARIAN", "PATNER"],
             $h1 = $(".rotate-title"),
             $sp = $h1.find(".rotate-title-ro"),
@@ -61,68 +59,80 @@ $(document).ready(function ($) {
         })();
     });
 
-//audio scroll stop/play 
-window.addEventListener("scroll", myFunction);
+    //audio scroll stop/play 
+    // scroll to mute 
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 350) {
+            $("#player-1").each(function () {
+                this.pause();
+            });
+            $(".mute-1").attr('src', 'img/icon/mute-2.png');
+        }
+    });
 
-function myFunction() {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("player-1").pause(); 
-    } else {
-        document.getElementById("player-1").play();  
-    }
-}
+//mute fade out, scroll back fade in
+    (function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                // $('#mute-1').animate({opacity: 0}); 
+                $('.back-home').fadeIn();
+            } else {
+                $('.back-home').fadeOut();
+                // $('#mute-1').animate({opacity: 1}); 
+            }
+        });
+    }());
 
-// function muteToggle(img) {
-//     if(img.src == "img/icon/unmute-2.png")
-//     {img.src = "img/icon/mute-2.png"; 
-//     documet.getElementById("player-1").pause();}
-//     else {
-//         img.src = "img/icon/unmute-2.png";
-//         document.getElementById("player-1").play();
-//     }
-
-// }
-
-$("#mute-1").click(function(){
-    if($(this).attr('src') == $(this).attr('data-src'))
-    {
-        var idx1 = $(this).attr('data-swap');
-        $(this).attr('src', idx1);
-        $('#player-1').each(function(){
-    this.pause(); 
-}); 
-    }
-    else {
-        var idx2 = $(this).attr('data-src'); 
-        $(this).attr('src', idx2); 
-        $('#player-1').each(function(){
-    this.play(); 
-});
-    }
-});
+    //manually toggle mute 
+    $(".mute-1").click(function () {
+        if ($(this).attr('src') == $(this).attr('data-src')) {
+            var idx1 = $(this).attr('data-swap');
+            $(this).attr('src', idx1);
+            $('#player-1').each(function () {
+                this.pause();
+            });
+        } else {
+            var idx2 = $(this).attr('data-src');
+            $(this).attr('src', idx2);
+            $('#player-1').each(function () {
+                this.play();
+            });
+        }
+    });
 
     var controllerS1 = new ScrollMagic.Controller();
-    
-var sceneMutePin = new ScrollMagic.Scene({
 
-triggerElement: '#header',
-            duration: 580,
-            triggerHook: 'onLeave',
-            offset: -10
-        })
-        .setPin("#mute-1")
-        .addIndicators()
-        .addTo(controllerS1);
+    // var sceneMutePin = new ScrollMagic.Scene({
+
+    //         triggerElement: '#header',
+    //         duration: 580,
+    //         triggerHook: 'onLeave',
+    //         offset: -10
+    //     })
+    //     .setPin("#mute-1")
+    //     .addIndicators()
+    //     .addTo(controllerS1);
 
     //scrollmagic-section-1
     // title effect
 
-    var tweenS1Fadeo1 = new TweenMax.to(".title", 0.1, {
-        autoAlpha: 0,
-        y: 400,
-        scale: 0.7,
-        force3D: true
-    });
+    var tweenS1Fadeo1 = new TimelineMax()
+        .to(".title", 0.1, {
+            autoAlpha: 0,
+            y: 400,
+            scale: 0.7,
+            force3D: true
+        })
+        .to(".mouse-icon", 0.1, {
+            autoAlpha: 0,
+        });
+
+    // var tweenS1Fadeo1 = new TweenMax.to(".title", 0.1, {
+    //     autoAlpha: 0,
+    //     y: 400,
+    //     scale: 0.7,
+    //     force3D: true
+    // });
 
     var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
         autoAlpha: 0,
@@ -130,6 +140,10 @@ triggerElement: '#header',
         scale: 0.7,
         force3D: true
     });
+
+       var tweenS1Fadeo3 = new TweenMax.to("#mute-1", 0.1, {
+            autoAlpha: 0,
+        });
 
     var tweenS1Fadei = new TweenMax.fromTo(".year", 0.3, {
         opacity: 0
@@ -168,6 +182,15 @@ triggerElement: '#header',
         .addIndicators()
         .addTo(controllerS1);
 
+var sceneS1Fadeo3 = new ScrollMagic.Scene({
+    triggerElement: '#mute-1',
+            triggerHook: 'onLeave',
+            offset: 500
+        })
+        .setTween(tweenS1Fadeo3)
+        .addIndicators()
+        .addTo(controllerS1);
+
     //early-life 
     // var tweenFadeinPs = new TweenMax.fromTo(".fadeIn-1", 3, {opacity: 0}, {opacity: 1}); 
     //
@@ -203,8 +226,8 @@ triggerElement: '#header',
         .addIndicators()
         .addTo(controllerS1);
 
-//
-var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
+    //
+    var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         opacity: 0
     }, {
         opacity: 1,
@@ -252,88 +275,111 @@ var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         .addIndicators()
         .addTo(controllerS1);
 
-//career 
-// define movement of panels
-  // define movement of slides
-		var tweenSlide = new TimelineMax()
-			// animate to second slide
-			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})		// move back in 3D space
-			.to(".container-scrollslide", 1,   {x: "-25%"})	// move in to first slide
-			.to(".container-scrollslide", 0.5, {z: 0})				// move back to origin in 3D space
-			// animate to third slide
-			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})
-			.to(".container-scrollslide", 1,   {x: "-50%"})
-			.to(".container-scrollslide", 0.5, {z: 0})
-			// animate to forth slide
-			.to(".container-scrollslide", 0.5, {z: -150, delay: 0.5})
-			.to(".container-scrollslide", 1,   {x: "-75%"})
-			.to(".container-scrollslide", 0.5, {z: 0});
+    //career 
+    // define movement of panels
+    // define movement of slides
+    var tweenSlide = new TimelineMax()
+        // animate to second slide
+        .to(".container-scrollslide", 0.5, {
+            z: -150,
+            delay: 0.5
+        }) // move back in 3D space
+        .to(".container-scrollslide", 1, {
+            x: "-25%"
+        }) // move in to first slide
+        .to(".container-scrollslide", 0.5, {
+            z: 0
+        }) // move back to origin in 3D space
+        // animate to third slide
+        .to(".container-scrollslide", 0.5, {
+            z: -150,
+            delay: 0.5
+        })
+        .to(".container-scrollslide", 1, {
+            x: "-50%"
+        })
+        .to(".container-scrollslide", 0.5, {
+            z: 0
+        })
+        // animate to forth slide
+        .to(".container-scrollslide", 0.5, {
+            z: -150,
+            delay: 0.5
+        })
+        .to(".container-scrollslide", 1, {
+            x: "-75%"
+        })
+        .to(".container-scrollslide", 0.5, {
+            z: 0
+        });
 
-		// create scene to pin and link animation
-		var scene9Pin = new ScrollMagic.Scene({
-				triggerElement: ".container-pin",
-				triggerHook: "onLeave",
-				duration: "500%"
-			})
-			.setPin(".container-pin")
-			.setTween(tweenSlide)
-			.addIndicators() // add indicators (requires plugin)
-			.addTo(controllerS1);
-
-
-var tweenZidx = new TweenMax.set(".layer-1", {zIndex:-1}); 
-var scene10Zidx = new ScrollMagic.Scene({
-  triggerElement: ".container-pin",
-  triggerHook: "onLeave",
-  offset: 60
-})
-.setTween(tweenZidx)
-.addIndicators()
-.addTo(controllerS1); 
-
-
-
-//stop when scroll away 
-var scene11Stopifame = new ScrollMagic.Scene({
-    triggerElement: '.container-pin', 
-    triggerHook: 'onLeave',
-    offset: -700
-})
-.addIndicators()
-.addTo(controllerS1)
-.on("enter leave", function(){
-
-$('iframe').each(function (index) {
-$(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
-    }); 
-});
+    // create scene to pin and link animation
+    var scene9Pin = new ScrollMagic.Scene({
+            triggerElement: ".container-pin",
+            triggerHook: "onLeave",
+            duration: "500%"
+        })
+        .setPin(".container-pin")
+        .setTween(tweenSlide)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controllerS1);
 
 
-var scene12Stopifame2 = new ScrollMagic.Scene({
-    triggerElement: '.container-pin', 
-    triggerHook: 'onLeave',
-    offset: 500
-})
-.addIndicators()
-.addTo(controllerS1)
-.on("enter leave", function(){
-
-$('iframe').each(function (index) {
-$(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');    
+    var tweenZidx = new TweenMax.set(".layer-1", {
+        zIndex: -1
     });
-});
+    var scene10Zidx = new ScrollMagic.Scene({
+            triggerElement: ".container-pin",
+            triggerHook: "onLeave",
+            offset: 60
+        })
+        .setTween(tweenZidx)
+        .addIndicators()
+        .addTo(controllerS1);
+
+
+
+    //stop when scroll away 
+    var scene11Stopifame = new ScrollMagic.Scene({
+            triggerElement: '.container-pin',
+            triggerHook: 'onLeave',
+            offset: -700
+        })
+        .addIndicators()
+        .addTo(controllerS1)
+        .on("enter leave", function () {
+
+            $('iframe').each(function (index) {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+            });
+        });
+
+
+    var scene12Stopifame2 = new ScrollMagic.Scene({
+            triggerElement: '.container-pin',
+            triggerHook: 'onLeave',
+            offset: 500
+        })
+        .addIndicators()
+        .addTo(controllerS1)
+        .on("enter leave", function () {
+
+            $('iframe').each(function (index) {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+            });
+        });
 
 
 
 
-//start the slider
+    //start the slider
     $(".slick").slick({
-      infinite: true,
-      arrows: false,
-      dots: true,
-      fade: true, 
-      speed: 500, 
-      cssEase: 'linear'
+        infinite: true,
+        arrows: false,
+        dots: true,
+        fade: true,
+        speed: 500,
+        cssEase: 'linear'
     });
 
 
