@@ -6,6 +6,7 @@ body,
 html {
     height: 100%;
     margin: 0;
+    background-color: #02000a;
 }
 
 * {
@@ -27,6 +28,42 @@ header
 	z-index: 9999;
 	background: url('../img/icon/loading-circle-5.gif') 50% 50% no-repeat;
 }*/
+
+#navbar-1.navbar {
+	background-color: transparent;
+	border: medium none;
+	border-radius: 0;
+	margin-bottom: 0;
+	padding: 15px 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+#navbar-1 .navbar-nav li a {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+#navbar-1 .navbar-nav > .active > a, #navbar-1 .navbar-nav > .active > a:focus, #navbar-1 .navbar-nav > .active > a:hover, #navbar-1 .navbar-nav li a:hover, #navbar-1 .navbar-nav li a:focus {
+	color: #FFFF00;
+	background: transparent; 
+}
+
+#navbar-1 a.navbar-brand span {
+    font-family: "Lato", sans-serif;
+    color: #757575;
+}
+
+#navbar-1 a.navbar-brand span:hover {
+    font-family: "Lato", sans-serif;
+    color: #FFFF00;
+}
+
+#navbar .dropdown-menu {
+    background: transparent;
+}
 
 .mouse-icon {
 	position: fixed;
@@ -112,6 +149,14 @@ header
 	top: 65%;
 }
 
+/*.cover {
+    background-color: black;
+    position: fixed;
+    height: 10em;
+    width: 100%;
+    z-index: 3;
+}*/
+
 #header {
     position: relative;
     display: block;
@@ -128,15 +173,13 @@ header
 
 .title,
 .year {
-    position: absolute;
-    margin: 35% 0 0 2.5%;
-    /*background-color: red; */
-    /*border: 1px dashed red;*/
+    position: fixed;
+    top: 35%; 
 }
 
 .title h1 {
     /*margin: 0 auto; */
-    font-size: 7em;
+    font-size: 5.5em;
     font-family: 'Anton', sans-serif;
     /*width: 100%;*/
     /*text-align: center; */
@@ -154,16 +197,12 @@ header
 .title h2 {
     /*position: absolute;*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 5em;
+    font-size: 4em;
     color: #FFFF00;
     /*font-weight: bolder;*/
     margin: 0;
     line-height: 85%;
     /*border: 1px dashed green;*/
-}
-
-#header .year {
-    margin: 85% 0 0 2.5%;
 }
 
 .year span {
@@ -385,8 +424,8 @@ career
 }
 
 /*full screen slick*/
-.container-slick {
-width: 100% !important; 
+#career .container-slick {
+width: 100%; 
 }
 
 .carousel-img {
@@ -465,9 +504,9 @@ justify-content: center; /* align horizontal */
     text-align: justify;
 }
 
-.btn-define {
-border: 1px solid #0fb8ad !important;
-color: #0fb8ad !important; 
+#slide-b .btn-define {
+border: 1px solid #0fb8ad;
+color: #0fb8ad; 
 }
 
 .round-pic-left {
@@ -494,9 +533,9 @@ padding-top: inherit;
 }*/
 
 /*caption*/
-.carousel-caption {
+/*.carousel-caption {
 bottom: 35% !important;
-}
+}*/
 
 .carousel-cap span {
     /*float: left;*/
@@ -579,23 +618,23 @@ line-height: 1.8em;
 
 
 /*slick */
-.slick-dots {
-    bottom: 96% !important; 
+#career .slick-dots {
+    bottom: 96%; 
 }
 
-.slick-dots li.slick-active button:before {
-    color: #64FFDA !important; 
+#career .slick-dots li.slick-active button:before {
+    color: #64FFDA; 
 }
 
-.slick-dots li button:before {
-    font-size: 36px !important; 
-    content: '•' !important; 
-    color: #F0F4C3 !important;
-    opacity: 1 !important; 
+#career .slick-dots li button:before {
+    font-size: 36px; 
+    content: '•'; 
+    color: #F0F4C3;
+    opacity: 1; 
 }
 
-.slick-dots li {
-    width: 40px !important; 
+#career .slick-dots li {
+    width: 40px; 
 }
 
 .gap {

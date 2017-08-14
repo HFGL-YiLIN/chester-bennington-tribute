@@ -2,18 +2,19 @@ $(document).ready(function ($) {
 
     //preloader
     $(window).ready(function () {
-        $('#status').delay(350).fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
+        $('#status').delay().fadeOut();
+        $('#preloader').delay(300).fadeOut('slow');
     });
 
-    //fixed title
+    //title appear
     var $tChester = $("#t-chester");
     var tweenS1Title = new TimelineMax()
-        .fromTo('.rotate-title-fix', 2.5, {
+        .fromTo('.rotate-title', 2.5, {
             opacity: 0
         }, {
             opacity: 1,
-            ease: Power1.easeIn
+            ease: Power1.easeIn,
+            delay: 1
         })
         .from($tChester, 1.5, {
             y: '-= 120'
@@ -70,8 +71,7 @@ $(document).ready(function ($) {
         }
     });
 
-//mute fade out, scroll back fade in
-    (function () {
+    //mute fade out, scroll back fade in
         $(window).scroll(function () {
             if ($(this).scrollTop() > 500) {
                 // $('#mute-1').animate({opacity: 0}); 
@@ -81,7 +81,7 @@ $(document).ready(function ($) {
                 // $('#mute-1').animate({opacity: 1}); 
             }
         });
-    }());
+
 
     //manually toggle mute 
     $(".mute-1").click(function () {
@@ -114,47 +114,53 @@ $(document).ready(function ($) {
     //     .addTo(controllerS1);
 
     //scrollmagic-section-1
-    // title effect
-
+    // title
     var tweenS1Fadeo1 = new TimelineMax()
-        .to(".title", 0.1, {
+        .to(".title", 0.5, {
             autoAlpha: 0,
-            y: 400,
             scale: 0.7,
             force3D: true
         })
         .to(".mouse-icon", 0.1, {
             autoAlpha: 0,
-        });
+        })
+        .fromTo(".year", 0.1, {
+            opacity: 0
+        }, {
+            opacity: 1,
+            ease: Power1.easeIn
+        })
+        .to(".year", 0.5, {
+            autoAlpha: 0,
+            scale: 0.7,
+            force3D: true,
+            delay: 0.4
+        })
+        .fromTo(".cover", 0.8, {
+            opacity: 0}, {opacity: 1}
+        );
 
-    // var tweenS1Fadeo1 = new TweenMax.to(".title", 0.1, {
+    // var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
     //     autoAlpha: 0,
-    //     y: 400,
+    //     y: 300,
     //     scale: 0.7,
     //     force3D: true
     // });
 
-    var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
+    var tweenS1Fadeo3 = new TweenMax.to("#mute-1", 0.1, {
         autoAlpha: 0,
-        y: 300,
-        scale: 0.7,
-        force3D: true
     });
 
-       var tweenS1Fadeo3 = new TweenMax.to("#mute-1", 0.1, {
-            autoAlpha: 0,
-        });
-
-    var tweenS1Fadei = new TweenMax.fromTo(".year", 0.3, {
-        opacity: 0
-    }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+    // var tweenS1Fadei = new TweenMax.fromTo(".year", 0.3, {
+    //     opacity: 0
+    // }, {
+    //     opacity: 1,
+    //     ease: Power1.easeIn
+    // });
 
     var scene1S1Fadeo1 = new ScrollMagic.Scene({
             triggerElement: '#header',
-            duration: 380,
+            duration: 900,
             triggerHook: 'onLeave',
             offset: 50
         })
@@ -162,28 +168,28 @@ $(document).ready(function ($) {
         .addIndicators()
         .addTo(controllerS1);
 
-    var scene2S1Fadei = new ScrollMagic.Scene({
-            triggerElement: '#header',
-            triggerHook: 'onLeave',
-            offset: 520
-        })
-        .setTween(tweenS1Fadei)
-        .addIndicators()
-        .addTo(controllerS1);
+    // var scene2S1Fadei = new ScrollMagic.Scene({
+    //         triggerElement: '#header',
+    //         triggerHook: 'onLeave',
+    //         offset: 520
+    //     })
+    //     .setTween(tweenS1Fadei)
+    //     .addIndicators()
+    //     .addTo(controllerS1);
 
 
-    var scene3S1Fadeo2 = new ScrollMagic.Scene({
-            triggerElement: '#header',
-            duration: 420,
-            triggerHook: 'onLeave',
-            offset: 650
-        })
-        .setTween(tweenS1Fadeo2)
-        .addIndicators()
-        .addTo(controllerS1);
+    // var scene3S1Fadeo2 = new ScrollMagic.Scene({
+    //         triggerElement: '#header',
+    //         duration: 420,
+    //         triggerHook: 'onLeave',
+    //         offset: 650
+    //     })
+    //     .setTween(tweenS1Fadeo2)
+    //     .addIndicators()
+    //     .addTo(controllerS1);
 
-var sceneS1Fadeo3 = new ScrollMagic.Scene({
-    triggerElement: '#mute-1',
+    var sceneS1Fadeo3 = new ScrollMagic.Scene({
+            triggerElement: '#mute-1',
             triggerHook: 'onLeave',
             offset: 500
         })
