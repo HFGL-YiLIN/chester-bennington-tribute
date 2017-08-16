@@ -119,7 +119,8 @@ $(document).ready(function ($) {
         .to(".title", 0.5, {
             autoAlpha: 0,
             scale: 0.7,
-            force3D: true
+            force3D: true, 
+            delay: 0.4 
         })
         .to(".mouse-icon", 0.1, {
             autoAlpha: 0,
@@ -134,10 +135,10 @@ $(document).ready(function ($) {
             autoAlpha: 0,
             scale: 0.7,
             force3D: true,
-            delay: 0.4
+            delay: 0.7
         })
-        .fromTo(".cover", 0.8, {
-            opacity: 0}, {opacity: 1}
+        .fromTo("#header", 0.8, {
+            opacity: 1}, {opacity: 0.2}
         );
 
     // var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
@@ -160,7 +161,7 @@ $(document).ready(function ($) {
 
     var scene1S1Fadeo1 = new ScrollMagic.Scene({
             triggerElement: '#header',
-            duration: 900,
+            duration: 1200,
             triggerHook: 'onLeave',
             offset: 50
         })
