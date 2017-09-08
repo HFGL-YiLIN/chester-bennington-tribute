@@ -63,7 +63,7 @@ header
 
 #navbar-1 a.navbar-brand span {
     font-family: "Lato", sans-serif;
-    color: #757575;
+    color: #64FFDA;
 }
 
 #navbar-1 a.navbar-brand span:hover {
@@ -307,12 +307,14 @@ early-life
 
 /*title bar*/
 
-#early-life a, #career a {
+#early-life a,
+#career a {
     color: #E6EE9C;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-#early-life a:hover, #career a:hover {
+#early-life a:hover,
+#career a:hover {
     color: #64FFDA;
 }
 
@@ -520,7 +522,7 @@ career
 }
 
 .row-v-2-2 {
-    left: 27%;
+    left: 24%;
     bottom: 23%;
 }
 
@@ -587,12 +589,18 @@ career
 
 /*career p style*/
 
-
 .carousel-cap {
-    width: 30%; 
-    top: 10%; 
-    left: 2%; 
-    color: white; 
+    width: 30%;
+    top: 10%;
+    color: white;
+}
+
+.carousel-left {
+    left: 2%;
+}
+
+.carousel-right {
+    right: 3%;
 }
 
 .carousel-cap .floatY {
@@ -609,14 +617,15 @@ career
 }
 
 .carousel-cap h3,
-.carousel-cap h4 {
+.carousel-cap h4, 
+.wrapper-1 h3 {
     font-family: 'Quicksand', sans-serif;
 }
 
-#cc-1-2 h3 {
-    /*width: 480px; 
-    line-height: 2em; 
-    color: white; */
+#cc-1-2 {
+    top: 8%;
+    width: 26%;
+    color: white;
 }
 
 #cc-1-3 h3 {
@@ -624,34 +633,83 @@ career
 }
 
 #cc-2-1 {
-    /*left: 30%;
-    bottom: 57%;*/
+top: 15%;
+    left: 30%;
+    width: 40%; 
+    z-index: 1;
 }
 
 #cc-2-2 {
+    top: 7%;
+    right: 0.5%;
     width: 40%;
-    left: 59%;
     text-align: right;
-    bottom: 68%;
+    color: black;
+}
+
+#cc-2-2 a,
+#cc-4-3 a {
+    color: #D50000; 
 }
 
 #cc-2-3 {
-    width: 45%;
-    left: 2%;
-    bottom: 60%;
+    top: 9%;
+    width: 40%;
+    left: 3%;
     z-index: 1;
+    color: black;
+}
+
+#cc-2-3 a {
+    color: #D50000; 
 }
 
 #cc-2-3 h3 {
     font-size: 1.6em;
 }
 
+.wrapper-1 {
+    color: white;
+}
+
 .div-line {
-    width: 696px;
+    width: 100%;
     height: 1px;
     background: linear-gradient(90deg, #0fb8ad 0%, #E6EE9C 35%, #C2185B 65%, #2cb5e8 85%);
 }
 
+#cc-3-1 {
+    width: 60%;
+    left: 20%;
+    top: 5%;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+#cc-3-3 {
+        font-size: 0.9em;
+    right: 3%;
+    top: 7%;
+    color: black; 
+}
+
+#cc-4-1 {
+    top: 15%; 
+    right: 5%; 
+}
+
+#cc-4-2 {
+        top: 5%;
+    right: 12%;
+    font-size: 0.7em;
+    z-index: 1;
+}
+
+#cc-4-3 {
+    left: 10%;
+    width: 45%;
+     color: black;
+}
 
 /*.gap-1 {
     height: 70px; 
