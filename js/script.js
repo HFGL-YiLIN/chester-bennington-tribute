@@ -72,15 +72,15 @@ $(document).ready(function ($) {
     });
 
     //mute fade out, scroll back fade in
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 500) {
-                // $('#mute-1').animate({opacity: 0}); 
-                $('.back-home').fadeIn();
-            } else {
-                $('.back-home').fadeOut();
-                // $('#mute-1').animate({opacity: 1}); 
-            }
-        });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            // $('#mute-1').animate({opacity: 0}); 
+            $('.back-home').fadeIn();
+        } else {
+            $('.back-home').fadeOut();
+            // $('#mute-1').animate({opacity: 1}); 
+        }
+    });
 
 
     //manually toggle mute 
@@ -119,8 +119,8 @@ $(document).ready(function ($) {
         .to(".title", 0.5, {
             autoAlpha: 0,
             scale: 0.7,
-            force3D: true, 
-            delay: 0.4 
+            force3D: true,
+            delay: 0.4
         })
         .to(".mouse-icon", 0.1, {
             autoAlpha: 0,
@@ -138,8 +138,10 @@ $(document).ready(function ($) {
             delay: 0.7
         })
         .fromTo("#header", 0.8, {
-            opacity: 1}, {opacity: 0.2}
-        );
+            opacity: 1
+        }, {
+            opacity: 0.2
+        });
 
     // var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
     //     autoAlpha: 0,
@@ -376,6 +378,40 @@ $(document).ready(function ($) {
             });
         });
 
+    //rip
+    function pathPrepare($el) {
+        var lineLength = $el[0].getTotalLength();
+        $el.css("stroke-dasharray", lineLength);
+        $el.css("stroke-dashoffset", lineLength);
+    }
+
+    var $rip = $("path.rip");
+
+    // prepare SVG
+    pathPrepare($rip);
+
+    // build tween
+    var tweenRIP = new TimelineMax()
+        .add(TweenMax.to($rip, 1, {
+            strokeDashoffset: 0,
+            ease: Linear.easeNone
+        })) // draw word for 0.9
+        .add(TweenMax.to("path", 1, {
+            stroke: "#33629c",
+            ease: Linear.easeNone
+        }), 0); // change color during the whole thing
+
+    // build scene
+    var sceneRIP = new ScrollMagic.Scene({
+            triggerElement: ".gap",
+            triggerHook: "onLeave", 
+            offset: -50,
+            duration: 200,
+            tweenChanges: true
+        })
+        .setTween(tweenRIP)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controllerS1);
 
 
 
@@ -388,8 +424,6 @@ $(document).ready(function ($) {
         speed: 500,
         cssEase: 'linear'
     });
-
-
 
 
 });
