@@ -378,9 +378,38 @@ $(document).ready(function ($) {
             });
         });
 
-    //rip
+  //-----------fadeout&dead-----------
+var tweenS1Fadeo1 = new TimelineMax()
+        .to(".title", 0.5, {
+            autoAlpha: 0,
+            scale: 0.7,
+            force3D: true,
+            delay: 0.4
+        })
+        .to(".mouse-icon", 0.1, {
+            autoAlpha: 0,
+        })
+        .fromTo(".year", 0.1, {
+            opacity: 0
+        }, {
+            opacity: 1,
+            ease: Power1.easeIn
+        })
+        .to(".year", 0.5, {
+            autoAlpha: 0,
+            scale: 0.7,
+            force3D: true,
+            delay: 0.7
+        })
+        .fromTo("#header", 0.8, {
+            opacity: 1
+        }, {
+            opacity: 0.2
+        });
+
+    //-----------rip-----------
     function pathPrepare($el) {
-        var lineLength = $el[0].getTotalLength();
+        var lineLength = 136;
         $el.css("stroke-dasharray", lineLength);
         $el.css("stroke-dashoffset", lineLength);
     }
@@ -397,7 +426,7 @@ $(document).ready(function ($) {
             ease: Linear.easeNone
         })) // draw word for 0.9
         .add(TweenMax.to("path", 1, {
-            stroke: "#33629c",
+            stroke: "#FFFF00",
             ease: Linear.easeNone
         }), 0); // change color during the whole thing
 
@@ -405,8 +434,8 @@ $(document).ready(function ($) {
     var sceneRIP = new ScrollMagic.Scene({
             triggerElement: ".gap",
             triggerHook: "onLeave", 
-            offset: -50,
-            duration: 200,
+            offset: -150,
+            duration: 300,
             tweenChanges: true
         })
         .setTween(tweenRIP)

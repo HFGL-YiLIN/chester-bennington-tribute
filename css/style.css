@@ -308,13 +308,15 @@ early-life
 /*title bar*/
 
 #early-life a,
-#career a {
+#career a, 
+#rip a {
     color: #E6EE9C;
     font-weight: bold;
 }
 
 #early-life a:hover,
-#career a:hover {
+#career a:hover, 
+#rip a:hover {
     color: #64FFDA;
 }
 
@@ -617,7 +619,7 @@ career
 }
 
 .carousel-cap h3,
-.carousel-cap h4, 
+.carousel-cap h4,
 .wrapper-1 h3 {
     font-family: 'Quicksand', sans-serif;
 }
@@ -633,9 +635,9 @@ career
 }
 
 #cc-2-1 {
-top: 15%;
+    top: 15%;
     left: 30%;
-    width: 40%; 
+    width: 40%;
     z-index: 1;
 }
 
@@ -649,7 +651,7 @@ top: 15%;
 
 #cc-2-2 a,
 #cc-4-3 a {
-    color: #D50000; 
+    color: #D50000;
 }
 
 #cc-2-3 {
@@ -661,7 +663,7 @@ top: 15%;
 }
 
 #cc-2-3 a {
-    color: #D50000; 
+    color: #D50000;
 }
 
 #cc-2-3 h3 {
@@ -687,19 +689,19 @@ top: 15%;
 }
 
 #cc-3-3 {
-        font-size: 0.9em;
+    font-size: 0.9em;
     right: 3%;
     top: 7%;
-    color: black; 
+    color: black;
 }
 
 #cc-4-1 {
-    top: 15%; 
-    right: 5%; 
+    top: 15%;
+    right: 5%;
 }
 
 #cc-4-2 {
-        top: 5%;
+    top: 5%;
     right: 12%;
     font-size: 0.7em;
     z-index: 1;
@@ -708,8 +710,9 @@ top: 15%;
 #cc-4-3 {
     left: 10%;
     width: 45%;
-     color: black;
+    color: black;
 }
+
 
 /*.gap-1 {
     height: 70px; 
@@ -740,6 +743,24 @@ top: 15%;
 
 #career .slick-dots li {
     width: 40px;
+}
+
+
+/*============================
+rip
+=============================*/
+
+#rip {
+    height: 800px;
+    width: 100%;
+    padding-top: 10%; 
+    background-color: #02000a;
+}
+
+#cc-5-1 {
+        margin: 0 auto; 
+    text-align: justify;
+    width: 55%;
 }
 
 .gap {
