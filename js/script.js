@@ -378,34 +378,47 @@ $(document).ready(function ($) {
             });
         });
 
-  //-----------fadeout&dead-----------
-var tweenS1Fadeo1 = new TimelineMax()
-        .to(".title", 0.5, {
-            autoAlpha: 0,
-            scale: 0.7,
-            force3D: true,
-            delay: 0.4
+    //-----------fadeout&dead-----------
+    var tweenRip1 = new TimelineMax()
+        .fromTo("#career", 0.8, {
+            opacity: 1
+        }, {
+            opacity: 0
         })
-        .to(".mouse-icon", 0.1, {
-            autoAlpha: 0,
-        })
-        .fromTo(".year", 0.1, {
+        .fromTo("#cc-5-1", 0.5, {
             opacity: 0
         }, {
             opacity: 1,
             ease: Power1.easeIn
         })
-        .to(".year", 0.5, {
+        .to("#cc-5-1", 0.5, {
             autoAlpha: 0,
             scale: 0.7,
             force3D: true,
             delay: 0.7
-        })
-        .fromTo("#header", 0.8, {
-            opacity: 1
-        }, {
-            opacity: 0.2
         });
+
+    var sceneRip1 = new ScrollMagic.Scene({
+            triggerElement: "#rip",
+            triggerHook: "onLeave",
+            offset: -750,
+            duration: 700,
+        })
+        .setTween(tweenRip1)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controllerS1);
+
+
+
+
+
+
+
+
+
+
+
+
 
     //-----------rip-----------
     function pathPrepare($el) {
@@ -420,25 +433,31 @@ var tweenS1Fadeo1 = new TimelineMax()
     pathPrepare($rip);
 
     // build tween
-    var tweenRIP = new TimelineMax()
-        .add(TweenMax.to($rip, 1, {
+    var tweenRip2 = new TimelineMax()
+        .to($rip, 2.3, {
             strokeDashoffset: 0,
-            ease: Linear.easeNone
-        })) // draw word for 0.9
-        .add(TweenMax.to("path", 1, {
-            stroke: "#FFFF00",
-            ease: Linear.easeNone
-        }), 0); // change color during the whole thing
+            ease: Power1.easeIn
+        }) // draw word for 0.9
+        .to("path", 1, {
+            stroke: "#F48FB1",
+            ease: Power1.easeNone
+        })
+        .fromTo(".chester-rip", 0.2, {
+            opacity: 0
+        }, {
+            opacity: 1, 
+            ease: Power1.easeIn
+        }); // change color during the whole thing
 
     // build scene
-    var sceneRIP = new ScrollMagic.Scene({
-            triggerElement: ".gap",
-            triggerHook: "onLeave", 
-            offset: -150,
-            duration: 300,
+    var sceneRip2 = new ScrollMagic.Scene({
+            triggerElement: "#rip",
+            triggerHook: "onLeave",
+            offset: -100,
+            duration: 200,
             tweenChanges: true
         })
-        .setTween(tweenRIP)
+        .setTween(tweenRip2)
         .addIndicators() // add indicators (requires plugin)
         .addTo(controllerS1);
 

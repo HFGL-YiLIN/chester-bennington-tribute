@@ -308,14 +308,14 @@ early-life
 /*title bar*/
 
 #early-life a,
-#career a, 
+#career a,
 #rip a {
     color: #E6EE9C;
     font-weight: bold;
 }
 
 #early-life a:hover,
-#career a:hover, 
+#career a:hover,
 #rip a:hover {
     color: #64FFDA;
 }
@@ -753,22 +753,24 @@ rip
 #rip {
     height: 800px;
     width: 100%;
-    padding-top: 10%; 
+    padding-top: 10%;
     background-color: #02000a;
 }
 
 #cc-5-1 {
-        margin: 0 auto; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     text-align: justify;
     width: 55%;
+    position: fixed;
 }
 
-.gap {
-    height: 800px;
-    width: 100%;
-    background-color: brown;
+.chester-rip {
+    position: absolute;
+    left: 9%; 
+    margin-top: 16%; 
 }
-
 
 /*==========================
 scroll back
