@@ -434,7 +434,7 @@ $(document).ready(function ($) {
 
     // build tween
     var tweenRip2 = new TimelineMax()
-        .to($rip, 2.3, {
+        .to($rip, 1.5, {
             strokeDashoffset: 0,
             ease: Power1.easeIn
         }) // draw word for 0.9
@@ -454,7 +454,7 @@ $(document).ready(function ($) {
             triggerElement: "#rip",
             triggerHook: "onLeave",
             offset: -100,
-            duration: 200,
+            duration: 100,
             tweenChanges: true
         })
         .setTween(tweenRip2)
