@@ -402,7 +402,7 @@ $(document).ready(function ($) {
             triggerElement: "#rip",
             triggerHook: "onLeave",
             offset: -750,
-            duration: 700,
+            duration: 700
         })
         .setTween(tweenRip1)
         .addIndicators() // add indicators (requires plugin)
@@ -437,31 +437,40 @@ $(document).ready(function ($) {
         .to($rip, 1.5, {
             strokeDashoffset: 0,
             ease: Power1.easeIn
-        }) // draw word for 0.9
+        }) 
         .to("path", 1, {
             stroke: "#F48FB1",
             ease: Power1.easeNone
-        })
-        .fromTo(".chester-rip", 0.2, {
-            opacity: 0
-        }, {
-            opacity: 1, 
-            ease: Power1.easeIn
-        }); // change color during the whole thing
+        });
 
-    // build scene
     var sceneRip2 = new ScrollMagic.Scene({
             triggerElement: "#rip",
             triggerHook: "onLeave",
             offset: -100,
-            duration: 100,
+            duration: 500,
             tweenChanges: true
         })
         .setTween(tweenRip2)
-        .addIndicators() // add indicators (requires plugin)
+        .addIndicators() 
         .addTo(controllerS1);
 
+var tweenRipPic = new TimelineMax()
+        .fromTo(".chester-rip", 2, {
+            opacity: 0
+        }, {
+            opacity: 1, 
+            ease: Power1.easeIn
+        });
 
+   var sceneRipPic = new ScrollMagic.Scene({
+            triggerElement: "#rip",
+            triggerHook: "onLeave",
+            offset: -100,
+            duration: 500
+        })
+        .setTween(tweenRipPic)
+        .addIndicators() 
+        .addTo(controllerS1);
 
     //start the slider
     $(".slick").slick({

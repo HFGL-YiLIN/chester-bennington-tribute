@@ -452,10 +452,14 @@ early-life
 /*============================
 career
 =============================*/
+
+
 /*prevent being covered by rip*/
+
 #career {
-    z-index: 1; 
+    z-index: 1;
 }
+
 
 /*slide scrollm*/
 
@@ -597,12 +601,13 @@ career
 
 
 /*career p style*/
-#slide-a h3, 
-#slide-b h3, 
-#cc-3-3 h3, 
-#cc-4-1 h3, 
+
+#slide-a h3,
+#slide-b h3,
+#cc-3-3 h3,
+#cc-4-1 h3,
 #cc-4-3 h3 {
-    font-size: 1.6em; 
+    font-size: 1.6em;
 }
 
 .carousel-cap {
@@ -639,9 +644,9 @@ career
     font-family: 'Quicksand', sans-serif;
 }
 
-#cc-1-1, 
-#cc-1-2, 
-#cc-1-3, 
+#cc-1-1,
+#cc-1-2,
+#cc-1-3,
 #cc-2-1,
 #cc-3-1,
 #cc-4-1,
@@ -653,17 +658,15 @@ career
 #cc-1-1,
 #cc-1-2,
 #cc-3-1,
-#cc-4-1, 
-#cc-4-3  
-{
-        border-left: 1px solid pink;
+#cc-4-1,
+#cc-4-3 {
+    border-left: 1px solid pink;
     padding-left: 20px;
 }
 
 #cc-1-1 {
-    top: 16%; 
-    width: 21%; 
-   
+    top: 16%;
+    width: 21%;
 }
 
 .career-1992 {
@@ -736,7 +739,7 @@ career
     right: 3%;
     top: 14%;
     color: black;
-      z-index: 1;
+    z-index: 1;
 }
 
 #cc-4-1 {
@@ -753,7 +756,7 @@ career
 
 #cc-4-3 {
     left: 5%;
-    top: 20%; 
+    top: 20%;
     height: 15%;
     width: 45%;
     color: black;
@@ -797,27 +800,45 @@ rip
 =============================*/
 
 #rip {
-    height: 800px;
+    height: 500px;
     width: 100%;
     background-color: #02000a;
 }
 
+#rip::after {
+    content: ' ';
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: #FFFF00;
+    -webkit-transform: skewY(-3deg) translateZ(0);
+    -moz-transform: skewY(-3deg) translateZ(0);
+    -ms-transform: skewY(-3deg) translateZ(0);
+    -o-transform: skewY(-3deg) translateZ(0);
+    transform: skewY(-3deg) translateZ(0);
+    /*position: absolute;*/
+    left: 0;
+    bottom: -100px;
+    overflow: hidden;
+    z-index: 88;
+}
+
 #cc-5-1 {
     margin: 0 auto;
-    top: 20%; 
+    top: 20%;
     left: 0;
     right: 0;
     text-align: justify;
     width: 55%;
-        position: fixed;
+    position: fixed;
 }
-
 
 .chester-rip {
     position: absolute;
-    left: 9%; 
-    margin-top: 31%; 
+    left: 9%;
+    margin-top: 31%;
 }
+
 
 /*==========================
 scroll back
