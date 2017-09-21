@@ -33,6 +33,7 @@ header
 	background: url('../img/icon/loading-circle-5.gif') 50% 50% no-repeat;
 }*/
 
+/*navbar*/
 #navbar-1.navbar {
     background-color: transparent;
     border: medium none;
@@ -144,6 +145,7 @@ header
     }
 }
 
+/*preloader*/
 #preloader {
     background: radial-gradient(black 15%, #02000a 60%);
     ;
@@ -184,6 +186,7 @@ header
     z-index: 3;
 }*/
 
+/*title*/
 #header {
     position: relative;
     display: block;
@@ -196,6 +199,7 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 5;
 }
 
 .title,
@@ -303,9 +307,16 @@ margin-left: 115%;
 /*==========================
 early-life
 ==========================*/
-
-
 /*title bar*/
+#early-life div, 
+#career, 
+#cc-2-1, 
+#cc-2-3, 
+#cc-3-3, 
+#cc-4-2
+ {
+    z-index: 5;
+}
 
 #early-life a,
 #career a {
@@ -456,9 +467,6 @@ career
 
 /*prevent being covered by rip*/
 
-#career {
-    z-index: 1;
-}
 
 
 /*slide scrollm*/
@@ -684,7 +692,6 @@ career
     top: 22%;
     left: 30%;
     width: 40%;
-    z-index: 1;
 }
 
 #cc-2-2 {
@@ -704,7 +711,6 @@ career
     top: 9%;
     width: 40%;
     left: 3%;
-    z-index: 1;
     color: black;
 }
 
@@ -739,7 +745,6 @@ career
     right: 3%;
     top: 14%;
     color: black;
-    z-index: 1;
 }
 
 #cc-4-1 {
@@ -751,7 +756,6 @@ career
     top: 5%;
     right: 12%;
     font-size: 0.7em;
-    z-index: 1;
 }
 
 #cc-4-3 {
@@ -800,9 +804,9 @@ rip
 =============================*/
 
 #rip {
-    height: 500px;
+    height: 155%;
     width: 100%;
-    background-color: #02000a;
+    /*background-color: #02000a;*/
 }
 
 #rip::after {
@@ -838,6 +842,42 @@ rip
     left: 9%;
     margin-top: 31%;
 }
+
+
+/*==========================
+offerurhelp
+==========================*/
+     #hope {
+            position: absolute;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        #offerurhelp {
+            height: 100%;
+            /*background-image: url(../img/chester-3-1.jpg);
+    background-repeat: no-repeat;
+     background-position-x: 50%;*/
+        }
+
+        #rain-canvas {
+            height: 100%;
+            width: 100%;
+        }
+
+        #rain-canvas canvas {
+            position: relative !important;
+             /*display: block;*/
+             /*margin: 0 auto;*/
+        }
+
+        .rain-text {
+            position: fixed;
+            top: 40%;
+            z-index: 1;
+            right: -1%;
+        }
+
 
 
 /*==========================

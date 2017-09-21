@@ -465,12 +465,25 @@ var tweenRipPic = new TimelineMax()
    var sceneRipPic = new ScrollMagic.Scene({
             triggerElement: "#rip",
             triggerHook: "onLeave",
-            offset: -100,
-            duration: 500
+            offset: 0,
+            duration: 350
         })
         .setTween(tweenRipPic)
         .addIndicators() 
         .addTo(controllerS1);
+
+// offerurhelp
+// rain
+var image = document.getElementById('hope');
+                image.onload = function() {
+                    var engine = new RainyDay({
+                        image: this,
+                        gravityAngle: Math.PI / 9
+                    });
+                    engine.trail = engine.TRAIL_SMUDGE;
+                    engine.rain([ [1, 0, 1000], [3, 3, 1] ], 100);
+                };
+            
 
     //start the slider
     $(".slick").slick({
