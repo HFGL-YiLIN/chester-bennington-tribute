@@ -83,7 +83,7 @@ $(document).ready(function ($) {
     });
 
 
-    //manually toggle mute 
+    //toggle mute manually
     $(".mute-1").click(function () {
         if ($(this).attr('src') == $(this).attr('data-src')) {
             var idx1 = $(this).attr('data-swap');
@@ -143,78 +143,30 @@ $(document).ready(function ($) {
             opacity: 0.2
         });
 
-    // var tweenS1Fadeo2 = new TweenMax.to(".year", 0.1, {
-    //     autoAlpha: 0,
-    //     y: 300,
-    //     scale: 0.7,
-    //     force3D: true
-    // });
-
-    var tweenS1Fadeo3 = new TweenMax.to("#mute-1", 0.1, {
-        autoAlpha: 0,
-    });
-
-    // var tweenS1Fadei = new TweenMax.fromTo(".year", 0.3, {
-    //     opacity: 0
-    // }, {
-    //     opacity: 1,
-    //     ease: Power1.easeIn
-    // });
-
     var scene1S1Fadeo1 = new ScrollMagic.Scene({
-            triggerElement: '#header',
-            duration: 1200,
-            triggerHook: 'onLeave',
-            offset: 50
-        })
+        triggerElement: '#header',
+        duration: 1200,
+        triggerHook: 'onLeave',
+        offset: 50
+    })
         .setTween(tweenS1Fadeo1)
         .addIndicators()
         .addTo(controllerS1);
 
-    // var scene2S1Fadei = new ScrollMagic.Scene({
-    //         triggerElement: '#header',
-    //         triggerHook: 'onLeave',
-    //         offset: 520
-    //     })
-    //     .setTween(tweenS1Fadei)
-    //     .addIndicators()
-    //     .addTo(controllerS1);
-
-
-    // var scene3S1Fadeo2 = new ScrollMagic.Scene({
-    //         triggerElement: '#header',
-    //         duration: 420,
-    //         triggerHook: 'onLeave',
-    //         offset: 650
-    //     })
-    //     .setTween(tweenS1Fadeo2)
-    //     .addIndicators()
-    //     .addTo(controllerS1);
-
-    var sceneS1Fadeo3 = new ScrollMagic.Scene({
-            triggerElement: '#mute-1',
-            triggerHook: 'onLeave',
-            offset: 500
-        })
-        .setTween(tweenS1Fadeo3)
-        .addIndicators()
-        .addTo(controllerS1);
-
     //early-life 
-    // var tweenFadeinPs = new TweenMax.fromTo(".fadeIn-1", 3, {opacity: 0}, {opacity: 1}); 
-    //
+    //  bar narration
     var tweenFadeinEl1 = new TweenMax.fromTo(".fadeIn-1", 0.5, {
         opacity: 0
     }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+            opacity: 1,
+            ease: Power1.easeIn
+        });
 
     var scene4FadeinEl1 = new ScrollMagic.Scene({
-            triggerElement: '.bar-1',
-            triggerHook: 'onLeave',
-            offset: -150
-        })
+        triggerElement: '.bar-1',
+        triggerHook: 'onLeave',
+        offset: -150
+    })
         .setTween(tweenFadeinEl1)
         .addIndicators()
         .addTo(controllerS1);
@@ -222,15 +174,15 @@ $(document).ready(function ($) {
     var tweenFadeinEl2 = new TweenMax.fromTo(".fadeIn-2", 0.5, {
         opacity: 0
     }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+            opacity: 1,
+            ease: Power1.easeIn
+        });
 
     var scene5FadeinEl2 = new ScrollMagic.Scene({
-            triggerElement: '.bar-2',
-            triggerHook: 'onLeave',
-            offset: -450
-        })
+        triggerElement: '.bar-2',
+        triggerHook: 'onLeave',
+        offset: -450
+    })
         .setTween(tweenFadeinEl2)
         .addIndicators()
         .addTo(controllerS1);
@@ -239,15 +191,15 @@ $(document).ready(function ($) {
     var tweenFadeinEl3 = new TweenMax.fromTo(".fadeIn-3", 0.5, {
         opacity: 0
     }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+            opacity: 1,
+            ease: Power1.easeIn
+        });
 
     var scene6FadeinEl3 = new ScrollMagic.Scene({
-            triggerElement: '.bar-2',
-            triggerHook: 'onLeave',
-            offset: 0
-        })
+        triggerElement: '.bar-2',
+        triggerHook: 'onLeave',
+        offset: 0
+    })
         .setTween(tweenFadeinEl3)
         .addIndicators()
         .addTo(controllerS1);
@@ -255,15 +207,15 @@ $(document).ready(function ($) {
     var tweenFadeinEl4 = new TweenMax.fromTo(".fadeIn-4", 0.5, {
         opacity: 0
     }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+            opacity: 1,
+            ease: Power1.easeIn
+        });
 
     var scene7FadeinEl4 = new ScrollMagic.Scene({
-            triggerElement: '.bar-3',
-            triggerHook: 'onLeave',
-            offset: -450
-        })
+        triggerElement: '.bar-3',
+        triggerHook: 'onLeave',
+        offset: -450
+    })
         .setTween(tweenFadeinEl4)
         .addIndicators()
         .addTo(controllerS1);
@@ -271,15 +223,15 @@ $(document).ready(function ($) {
     var tweenFadeinEl5 = new TweenMax.fromTo(".fadeIn-5", 0.5, {
         opacity: 0
     }, {
-        opacity: 1,
-        ease: Power1.easeIn
-    });
+            opacity: 1,
+            ease: Power1.easeIn
+        });
 
     var scene8FadeinEl5 = new ScrollMagic.Scene({
-            triggerElement: '.bar-3',
-            triggerHook: 'onLeave',
-            offset: 0
-        })
+        triggerElement: '.bar-3',
+        triggerHook: 'onLeave',
+        offset: 0
+    })
         .setTween(tweenFadeinEl5)
         .addIndicators()
         .addTo(controllerS1);
@@ -322,15 +274,14 @@ $(document).ready(function ($) {
             z: 0
         });
 
-    // create scene to pin and link animation
     var scene9Pin = new ScrollMagic.Scene({
-            triggerElement: ".container-pin",
-            triggerHook: "onLeave",
-            duration: "500%"
-        })
+        triggerElement: ".container-pin",
+        triggerHook: "onLeave",
+        duration: "500%"
+    })
         .setPin(".container-pin")
         .setTween(tweenSlide)
-        .addIndicators() // add indicators (requires plugin)
+        .addIndicators()
         .addTo(controllerS1);
 
 
@@ -338,22 +289,22 @@ $(document).ready(function ($) {
         zIndex: -1
     });
     var scene10Zidx = new ScrollMagic.Scene({
-            triggerElement: ".container-pin",
-            triggerHook: "onLeave",
-            offset: 60
-        })
+        triggerElement: ".container-pin",
+        triggerHook: "onLeave",
+        offset: 60
+    })
         .setTween(tweenZidx)
         .addIndicators()
         .addTo(controllerS1);
 
 
 
-    //stop when scroll away 
+    //stop music when scroll away 
     var scene11Stopifame = new ScrollMagic.Scene({
-            triggerElement: '.container-pin',
-            triggerHook: 'onLeave',
-            offset: -700
-        })
+        triggerElement: '.container-pin',
+        triggerHook: 'onLeave',
+        offset: -700
+    })
         .addIndicators()
         .addTo(controllerS1)
         .on("enter leave", function () {
@@ -365,10 +316,10 @@ $(document).ready(function ($) {
 
 
     var scene12Stopifame2 = new ScrollMagic.Scene({
-            triggerElement: '.container-pin',
-            triggerHook: 'onLeave',
-            offset: 500
-        })
+        triggerElement: '.container-pin',
+        triggerHook: 'onLeave',
+        offset: 500
+    })
         .addIndicators()
         .addTo(controllerS1)
         .on("enter leave", function () {
@@ -399,11 +350,11 @@ $(document).ready(function ($) {
         });
 
     var sceneRip1 = new ScrollMagic.Scene({
-            triggerElement: "#rip",
-            triggerHook: "onLeave",
-            offset: -750,
-            duration: 700
-        })
+        triggerElement: "#rip",
+        triggerHook: "onLeave",
+        offset: -750,
+        duration: 700
+    })
         .setTween(tweenRip1)
         .addIndicators() // add indicators (requires plugin)
         .addTo(controllerS1);
@@ -437,53 +388,44 @@ $(document).ready(function ($) {
         .to($rip, 1.5, {
             strokeDashoffset: 0,
             ease: Power1.easeIn
-        }) 
+        })
         .to("path", 1, {
             stroke: "#F48FB1",
             ease: Power1.easeNone
         });
 
     var sceneRip2 = new ScrollMagic.Scene({
-            triggerElement: "#rip",
-            triggerHook: "onLeave",
-            offset: -100,
-            duration: 500,
-            tweenChanges: true
-        })
+        triggerElement: "#rip",
+        triggerHook: "onLeave",
+        offset: -100,
+        duration: 500,
+        tweenChanges: true
+    })
         .setTween(tweenRip2)
-        .addIndicators() 
+        .addIndicators()
         .addTo(controllerS1);
 
-var tweenRipPic = new TimelineMax()
+    var tweenRipPic = new TimelineMax()
         .fromTo(".chester-rip", 2, {
             opacity: 0
         }, {
-            opacity: 1, 
+            opacity: 1,
             ease: Power1.easeIn
         });
 
-   var sceneRipPic = new ScrollMagic.Scene({
-            triggerElement: "#rip",
-            triggerHook: "onLeave",
-            offset: 0,
-            duration: 350
-        })
+    var sceneRipPic = new ScrollMagic.Scene({
+        triggerElement: "#rip",
+        triggerHook: "onLeave",
+        offset: 0,
+        duration: 350
+    })
         .setTween(tweenRipPic)
-        .addIndicators() 
+        .addIndicators()
         .addTo(controllerS1);
 
-// offerurhelp
-// rain
-var image = document.getElementById('hope');
-                image.onload = function() {
-                    var engine = new RainyDay({
-                        image: this,
-                        gravityAngle: Math.PI / 9
-                    });
-                    engine.trail = engine.TRAIL_SMUDGE;
-                    engine.rain([ [1, 0, 1000], [3, 3, 1] ], 100);
-                };
-            
+    // offerurhelp
+    // rain is in html
+
 
     //start the slider
     $(".slick").slick({

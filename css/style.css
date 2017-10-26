@@ -17,6 +17,9 @@ html {
     padding: 0 !important;
 }
 
+.row {
+    margin: 0 !important;
+}
 
 /*==========================
 header
@@ -43,7 +46,7 @@ header
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
 }
 
 #navbar-1 .navbar-nav li a {
@@ -199,7 +202,7 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 5;
+    z-index: 3;
 }
 
 .title,
@@ -308,14 +311,8 @@ margin-left: 115%;
 early-life
 ==========================*/
 /*title bar*/
-#early-life div, 
-#career, 
-#cc-2-1, 
-#cc-2-3, 
-#cc-3-3, 
-#cc-4-2
- {
-    z-index: 5;
+#early-life div {
+    z-index: 3;
 }
 
 #early-life a,
@@ -467,6 +464,9 @@ career
 
 /*prevent being covered by rip*/
 
+#career {
+    z-index: 3;
+}
 
 
 /*slide scrollm*/
@@ -692,6 +692,7 @@ career
     top: 22%;
     left: 30%;
     width: 40%;
+    z-index: 3;
 }
 
 #cc-2-2 {
@@ -711,6 +712,7 @@ career
     top: 9%;
     width: 40%;
     left: 3%;
+    z-index: 3;
     color: black;
 }
 
@@ -745,6 +747,7 @@ career
     right: 3%;
     top: 14%;
     color: black;
+    z-index: 3;
 }
 
 #cc-4-1 {
@@ -756,6 +759,7 @@ career
     top: 5%;
     right: 12%;
     font-size: 0.7em;
+    z-index: 3;
 }
 
 #cc-4-3 {
@@ -804,28 +808,27 @@ rip
 =============================*/
 
 #rip {
-    height: 155%;
+    height: 130%;
     width: 100%;
     /*background-color: #02000a;*/
+    /* background-color: balck; */
+    background: linear-gradient(#02000a, black, black);
 }
 
-#rip::after {
+/* #rip::after {
     content: ' ';
     display: block;
     height: 200px;
     width: 100%;
-    background: #FFFF00;
+    background: black;
     -webkit-transform: skewY(-3deg) translateZ(0);
     -moz-transform: skewY(-3deg) translateZ(0);
     -ms-transform: skewY(-3deg) translateZ(0);
     -o-transform: skewY(-3deg) translateZ(0);
     transform: skewY(-3deg) translateZ(0);
-    /*position: absolute;*/
-    left: 0;
-    bottom: -100px;
-    overflow: hidden;
-    z-index: 88;
-}
+    position: absolute;
+    bottom: -10485px;
+} */
 
 #cc-5-1 {
     margin: 0 auto;
@@ -840,26 +843,90 @@ rip
 .chester-rip {
     position: absolute;
     left: 9%;
-    margin-top: 31%;
+    margin-top: 28%;
 }
 
 
 /*==========================
 offerurhelp
 ==========================*/
+#offerurhelp::before {
+    content: ' ';
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: black;
+    -webkit-transform: skewY(-3deg) translateZ(0);
+    -moz-transform: skewY(-3deg) translateZ(0);
+    -ms-transform: skewY(-3deg) translateZ(0);
+    -o-transform: skewY(-3deg) translateZ(0);
+    transform: skewY(-3deg) translateZ(0);
+    position: absolute;
+    bottom: -10485px;
+}
+
+.rain-texttest {
+    position: absolute;
+    bottom: -1219%;
+}
+
      #hope {
             position: absolute;
             opacity: 0.5;
             z-index: -1;
+            width: 100%;
+            height: 100%;
         }
 
         #offerurhelp {
             height: 100%;
+            /* padding-top: 16px; */
             /*background-image: url(../img/chester-3-1.jpg);
     background-repeat: no-repeat;
      background-position-x: 50%;*/
         }
 
+        
+        #offerurhelp h2 {
+            color: #fff;
+            text-align: left;
+            font-size: 100px;
+        }
+
+        #offerurhelp h2 span {
+            display: block;
+            line-height: 77%;
+        
+        }
+
+        #offerurhelp h2 span.line-1 {
+            font-weight: 300;
+            font-size: 115px;
+            line-height: 100%;
+        
+        }
+
+        #offerurhelp h2 span.line-2 {
+            font-weight: 300;
+            font-size: 115px;
+            line-height: 100%;
+        }
+
+        #offerurhelp h2 span.line-3 {
+            font-weight: 200;
+            font-size: 100px;
+            line-height: 100%;
+            
+            /* margin-top: 6px; */
+        }
+        
+        #offerurhelp h2 span.line-4 {
+            font-weight: 300;
+            font-size: 115px;
+        }
+      
+      
+        
         #rain-canvas {
             height: 100%;
             width: 100%;
@@ -867,6 +934,7 @@ offerurhelp
 
         #rain-canvas canvas {
             position: relative !important;
+            z-index: -1;
              /*display: block;*/
              /*margin: 0 auto;*/
         }
@@ -874,9 +942,13 @@ offerurhelp
         .rain-text {
             position: fixed;
             top: 40%;
-            z-index: 1;
-            right: -1%;
+            z-index: 3;
+            right: -10%;
         }
+
+      
+
+
 
 
 
