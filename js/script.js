@@ -425,7 +425,27 @@ $(document).ready(function ($) {
 
     // offerurhelp
     // rain is in html
+var tweenOfferUr = new TweenMax.fromTo('#offerurhelp .urhelptext', 0.5, {
+    y: 50, 
+    x: -50, 
+    opacity: 0
+}, {
+    y: 0, 
+    x: 0, 
+    opacity: 1
+}, 0.2); 
 
+var sceneOfferUr = new ScrollMagic.Scene(
+{
+    triggerElement: "#offerurhelp", 
+    triggerHook: "onLeave", 
+    offset: 0, 
+    duration: 500
+}
+)
+.setTween(tweenOfferUr)
+.addIndicators()
+.addTo(controllerS1);
 
     //start the slider
     $(".slick").slick({
