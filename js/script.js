@@ -407,9 +407,11 @@ $(document).ready(function ($) {
 
     var tweenRipPic = new TimelineMax()
         .fromTo(".chester-rip", 2, {
-            opacity: 0
+            opacity: 0,
+            x: -50
         }, {
             opacity: 1,
+            x: 0, 
             ease: Power1.easeIn
         });
 
@@ -417,12 +419,31 @@ $(document).ready(function ($) {
         triggerElement: "#rip",
         triggerHook: "onLeave",
         offset: 0,
-        duration: 350
+        duration: 320
     })
         .setTween(tweenRipPic)
         .addIndicators()
         .addTo(controllerS1);
 
+    //     var tweenCanvas = new TweenMax.fromTo(CSSRulePlugin.getRule("#offerurhelp:before"), 0.5,
+    //     {cssRule:{
+    //         y: 0
+    //     }},
+    //     {cssRule:{
+    //         y: 100 
+    //     }}
+    // );
+
+    // var sceneCanvas = new ScrollMagic.Scene({
+    //     triggerElement: '#rain-canvas',
+    //     triggerHook: "onLeave",
+    //     duration: 700,
+    //     offset: -250
+    // })
+    // .setTween(tweenCanvas)
+    // .addIndicators()
+    // .addTo(controllerS1);
+        
     // offerurhelp
     // rain is in html
     // var tweenOfferUr = new TweenMax.staggerFromTo('#offerurhelp .urhelptext', 0.5, {

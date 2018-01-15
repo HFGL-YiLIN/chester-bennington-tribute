@@ -317,7 +317,7 @@ section-early-life
     font-weight: bold;
 }
 
-#early-life a:hover, #career a:hover, #rip a:hover {
+#early-life a:hover, #career a:hover, #rip a:hover, #offerurhelp .iasp a:hover {
     color: #64FFDA;
 }
 
@@ -816,6 +816,26 @@ section-offerurhelp
     /* need to modify when window size is full */
 }
 
+#offerurhelp::after {
+    content: ' ';
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(145deg, #8BC34A   12%, #1fc8db 65%, #F8BBD0  97%);
+    /* background: linear-gradient(145deg, #8BC34A   5%, #1fc8db 55%, #F8BBD0  77%);  */
+    /* background: linear-gradient(130deg, #8BC34A   4%, #1fc8db 57%, #F8BBD0  82%) */
+    -webkit-transform: skewY(3deg) translateZ(0);
+    -moz-transform: skewY(3deg) translateZ(0);
+    -ms-transform: skewY(3deg) translateZ(0);
+    -o-transform: skewY(3deg) translateZ(0);
+    transform: skewY(3deg) translateZ(0);
+    position: absolute;
+    margin-top: -3%; 
+    overflow: hidden;
+    /* bottom: -10485px; */
+    /* need to modify when window size is full */
+}
+
 #offerurhelp .rain-text {
     position: absolute;
     margin-top: 28%;
@@ -870,7 +890,7 @@ section-offerurhelp
 
 #offerurhelp hr {
     border: none;
-    height: 1px; 
+    height: 1.9px; 
     /* width: 100%;  */
     margin: 4.5em 0 0 13em; 
     background: linear-gradient(90deg, red,orange,green,#2196F3,indigo,cyan,violet);
@@ -912,7 +932,8 @@ section-offerurhelp
 #rain-canvas canvas {
     /* position: relative !important; */
     z-index: -1;
-    /* display: block; */
+    display: block; 
+    /* remove a black line between next section */
     /* margin: 0 auto; */
     /* height: 100%; */
     width: 100%;
@@ -922,29 +943,31 @@ section-offerurhelp
 section-footer
 ==========================*/
 
-#footer::before {
-    content: ' ';
-    display: block;
+#footer {
+    /* margin-top: -0.3%;  */
     height: 200px;
-    width: 100%;
-    background: black;
-    -webkit-transform: skewY(3deg) translateZ(0);
-    -moz-transform: skewY(3deg) translateZ(0);
-    -ms-transform: skewY(3deg) translateZ(0);
-    -o-transform: skewY(3deg) translateZ(0);
-    transform: skewY(3deg) translateZ(0);
-    position: absolute;
-    margin-top: -3%; 
-    /* bottom: -10485px; */
-    /* need to modify when window size is full */
+    position: relative;
+    background: linear-gradient(145deg, #8BC34A   5%, #1fc8db 61%, #F8BBD0   95%);
+    /* background: linear-gradient(145deg, #8BC34A   0%, #1fc8db 51%, #F8BBD0   75%); */
 }
 
 #footer .test {
-    color: black; 
-    height: 200px; 
+    font-size: 50px; 
+    text-transform: uppercase;
+    /* background-color: #C2185B; */
+}
+
+#footer .footer {
+    position: relative; 
+    /* wont be covered by bar */
 }
 
 
+
+
+/* Copyright © 2018, scotch.io, LLC | All rights reserved */
+
+/* All contents © Copyright 1997-2017 Sam Hill. All rights reserved. Nearly 20 years online (since 17th September 1997).  */
 
 /*==========================
 scroll back
