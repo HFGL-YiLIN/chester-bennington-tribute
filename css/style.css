@@ -12,13 +12,13 @@ body, html {
     box-sizing: border-box;
 }
 
-.container {
+.nopadding {
     padding: 0 !important;
 }
 
-.row {
+/* .row {
     margin: 0 !important;
-}
+} */
 
 /*==========================
 section-header
@@ -792,7 +792,7 @@ section-rip
 .chester-rip {
     position: absolute;
     left: 9%;
-    margin-top: 28%;
+    margin-top: 26.5%;
 }
 
 /*==========================
@@ -811,7 +811,7 @@ section-offerurhelp
     -o-transform: skewY(-3deg) translateZ(0);
     transform: skewY(-3deg) translateZ(0);
     position: absolute;
-    margin-top: -2.6%; 
+    margin-top: -2.6%;
     /* bottom: -10485px; */
     /* need to modify when window size is full */
 }
@@ -819,9 +819,9 @@ section-offerurhelp
 #offerurhelp::after {
     content: ' ';
     display: block;
-    height: 200px;
+    height: 110px;
     width: 100%;
-    background: linear-gradient(145deg, #8BC34A   12%, #1fc8db 65%, #F8BBD0  97%);
+    background: linear-gradient(145deg, #8BC34A 12%, #1fc8db 64%, #F8BBD0 95%);
     /* background: linear-gradient(145deg, #8BC34A   5%, #1fc8db 55%, #F8BBD0  77%);  */
     /* background: linear-gradient(130deg, #8BC34A   4%, #1fc8db 57%, #F8BBD0  82%) */
     -webkit-transform: skewY(3deg) translateZ(0);
@@ -830,7 +830,7 @@ section-offerurhelp
     -o-transform: skewY(3deg) translateZ(0);
     transform: skewY(3deg) translateZ(0);
     position: absolute;
-    margin-top: -3%; 
+    margin-top: -3%;
     overflow: hidden;
     /* bottom: -10485px; */
     /* need to modify when window size is full */
@@ -839,11 +839,9 @@ section-offerurhelp
 #offerurhelp .rain-text {
     position: absolute;
     margin-top: 28%;
-    left: 10%; 
-    width: 80%; 
+    left: 10%;
+    width: 80%;
 }
-
-
 
 #offerurhelp {
     /* height: 100%; */
@@ -861,16 +859,16 @@ section-offerurhelp
 
 #offerurhelp .line-1 {
     font-size: 7em;
-    font-weight: 600; 
-    letter-spacing: -5px; 
+    font-weight: 600;
+    letter-spacing: -5px;
 }
 
 #offerurhelp .line-2 {
-    margin-top: 0; 
-    line-height: 0.8; 
+    margin-top: 0;
+    line-height: 0.8;
     font-size: 6em;
     font-weight: 600;
-    letter-spacing: -4px; 
+    letter-spacing: -4px;
 }
 
 #offerurhelp .line-2 a {
@@ -883,30 +881,30 @@ section-offerurhelp
 
 #offerurhelp .line-3 {
     font-size: 30px;
-    font-family: 'Lato', sans-serif; 
-    letter-spacing: 1.5px; 
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1.5px;
     text-align: right;
 }
 
 #offerurhelp hr {
     border: none;
-    height: 1.9px; 
+    height: 1.9px;
     /* width: 100%;  */
-    margin: 4.5em 0 0 13em; 
-    background: linear-gradient(90deg, red,orange,green,#2196F3,indigo,cyan,violet);
+    margin: 4.5em 0 0 13em;
+    background: linear-gradient(90deg, red, orange, green, #2196F3, indigo, cyan, violet);
 }
 
 #offerurhelp .iasp a {
     font-size: 28px;
     /* line-height: 1.5; */
     color: #FFFF00;
-    letter-spacing: 2.5px; 
+    letter-spacing: 2.5px;
     font-family: 'Pathway Gothic One', sans-serif;
     text-align: right;
 }
 
 #offerurhelp .iasp {
-    margin-top: -5px; 
+    margin-top: -5px;
     text-align: right;
 }
 
@@ -932,7 +930,7 @@ section-offerurhelp
 #rain-canvas canvas {
     /* position: relative !important; */
     z-index: -1;
-    display: block; 
+    display: block;
     /* remove a black line between next section */
     /* margin: 0 auto; */
     /* height: 100%; */
@@ -945,25 +943,59 @@ section-footer
 
 #footer {
     /* margin-top: -0.3%;  */
-    height: 200px;
+    /* height: 200px; */
     position: relative;
-    background: linear-gradient(145deg, #8BC34A   5%, #1fc8db 61%, #F8BBD0   95%);
+    background: linear-gradient(145deg, #8BC34A 5%, #1fc8db 61%, #F8BBD0 95%);
     /* background: linear-gradient(145deg, #8BC34A   0%, #1fc8db 51%, #F8BBD0   75%); */
 }
 
-#footer .test {
-    font-size: 50px; 
+#footer .footertext {
+    font-size: 20px;
     text-transform: uppercase;
+    /* position: relative;  */
     /* background-color: #C2185B; */
 }
 
-#footer .footer {
-    position: relative; 
+#footer .copytext h2 {
+    font-size: 20px;
+}
+
+#footer .footer, #footer .copyrighttext {
+    /* position: relative;  */
     /* wont be covered by bar */
 }
 
+#footer .copyrighttext {
+    background: rgb(20, 20, 20);
+    /* position: relative;  */
+    /* wont be covered by bar */
+}
 
+.chester-logo {
+    /* max-width: 45%; */
+    width: 150px;
+    height: 150px;
+}
 
+#footer .copyrighttext span {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    /* font-weight: 300; */
+    /* color: #C9C9C9; */
+    background: linear-gradient(145deg, #8BC34A 5%, #1fc8db 61%, #F8BBD0 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+#footer .copyrighttext .space {
+    margin: 1em auto;
+}
+
+#footer .copyrighttext a {
+    /* color: #F44336; */
+    color: #FFEB3B;
+}
 
 /* Copyright © 2018, scotch.io, LLC | All rights reserved */
 

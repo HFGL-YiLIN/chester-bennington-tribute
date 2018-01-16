@@ -458,8 +458,8 @@ $(document).ready(function ($) {
 
     var tweenOfferUr = new TimelineMax()
         .fromTo('#offerurhelp .urhelptext1', 0.5, {
-            y: -50,
-            x: -50,
+            y: -60,
+            x: -20,
             opacity: 0
         }, {
             y: 0,
@@ -467,8 +467,8 @@ $(document).ready(function ($) {
             opacity: 1
         }, 0.2)
         .fromTo('#offerurhelp .urhelptext2', 0.5, {
-            y: -50,
-            x: -50,
+            y: -60,
+            x: -20,
             opacity: 0
         }, {
             y: 0,
@@ -477,8 +477,8 @@ $(document).ready(function ($) {
             delay: 0.2
         }, 0.2)
         .fromTo('#offerurhelp .urhelptext3', 0.5, {
-            y: 50,
-            x: 50,
+            y: 20,
+            x: 60,
             opacity: 0
         }, {
             y: 0,
@@ -487,8 +487,8 @@ $(document).ready(function ($) {
             delay: 0.4
         }, 0.2)
         .fromTo('#offerurhelp .urhelptext4', 0.5, {
-            y: 50,
-            x: 50,
+            y: 20,
+            x: 60,
             opacity: 0
         }, {
             y: 0,
@@ -497,8 +497,8 @@ $(document).ready(function ($) {
             delay: 0.8
         }, 0.2)
         .fromTo('#offerurhelp .urhelptext5', 0.5, {
-            y: 50,
-            x: 50,
+            y: 20,
+            x: 60,
             opacity: 0
         }, {
             y: 0,
