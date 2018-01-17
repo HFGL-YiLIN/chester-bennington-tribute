@@ -627,13 +627,14 @@ section-career
 }
 
 #cc-1-1 {
-    top: 16%;
-    width: 21%;
+    top: 10%;
+    left: 18%; 
+    /* width: 21%; */
 }
 
 .career-1992 {
     padding-top: 5%;
-    width: 125%;
+    /* width: 125%; */
 }
 
 #cc-1-2 {
@@ -821,7 +822,7 @@ section-offerurhelp
     display: block;
     height: 110px;
     width: 100%;
-    background: linear-gradient(145deg, #8BC34A 12%, #1fc8db 64%, #F8BBD0 95%);
+    background: linear-gradient(145deg, #8BC34A 12%, #1fc8db 69%, #F8BBD0 103%); 
     /* background: linear-gradient(145deg, #8BC34A   5%, #1fc8db 55%, #F8BBD0  77%);  */
     /* background: linear-gradient(130deg, #8BC34A   4%, #1fc8db 57%, #F8BBD0  82%) */
     -webkit-transform: skewY(3deg) translateZ(0);
@@ -950,14 +951,31 @@ section-footer
 }
 
 #footer .footertext {
-    font-size: 20px;
+    /* font-size: 20px; */
     text-transform: uppercase;
+    margin-top: 2%; 
     /* position: relative;  */
     /* background-color: #C2185B; */
 }
 
-#footer .copytext h2 {
-    font-size: 20px;
+#footer .footertext .line-1 {
+    text-align: right;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #ffffff91;
+    margin-top: 6%;
+}
+
+#footer .footertext .line-2 {
+    text-align: right;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #8682826e;
+    margin-top: 8.5%;
+}
+
+#footer .spaceleft {
+    margin-left: 7%;
 }
 
 #footer .footer, #footer .copyrighttext {
@@ -966,7 +984,8 @@ section-footer
 }
 
 #footer .copyrighttext {
-    background: rgb(20, 20, 20);
+    background: #141414;
+    text-align: center; 
     /* position: relative;  */
     /* wont be covered by bar */
 }
@@ -975,6 +994,13 @@ section-footer
     /* max-width: 45%; */
     width: 150px;
     height: 150px;
+}
+
+.lp-logo {
+    /* max-width: 45%; */
+    margin-top: 41.1%;
+    width: 100px;
+    height: 100px;
 }
 
 #footer .copyrighttext span {
@@ -989,7 +1015,8 @@ section-footer
 }
 
 #footer .copyrighttext .space {
-    margin: 1em auto;
+    /* margin: 1em auto; */
+    margin: 1em auto 0.5em;
 }
 
 #footer .copyrighttext a {
