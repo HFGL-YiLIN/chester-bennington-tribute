@@ -349,7 +349,18 @@ section-early-life
 .floatY {
     font-family: "Lato", sans-serif;
     font-weight: 100;
-    color: #64FFDA;
+    /* color: #64FFDA; */
+    color: #64feff;
+}
+
+.slide-a-a .floatY {
+    color: #6c4833;
+}
+
+#slide-a .slide-a-a h3 {
+    color: #1e272e; 
+    font-size: 1.7em;
+    font-weight: 600;
 }
 
 .bg-img .floatY {
@@ -367,7 +378,8 @@ section-early-life
     float: right;
     font-size: 2em;
     line-height: 75%;
-    color: #64FFDA;
+    color: #64feff;
+    /* color: #64FFDA; */
 }
 
 .bg-img .float-right {
@@ -627,9 +639,9 @@ section-career
 }
 
 #cc-1-1 {
-    top: 10%;
-    left: 18%; 
-    /* width: 21%; */
+    top: 10.5%;
+    left: 22%; 
+    width: 28%;
 }
 
 .career-1992 {
@@ -638,8 +650,8 @@ section-career
 }
 
 #cc-1-2 {
-    top: 13%;
-    width: 26%;
+    /* top: 13%; */
+    width: 36%;
     color: white;
 }
 
