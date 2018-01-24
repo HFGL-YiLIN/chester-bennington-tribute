@@ -354,7 +354,8 @@ section-early-life
 }
 
 .slide-a-a .floatY {
-    color: #6c4833;
+    /* color: #6c4833; */
+    color: #b12222; 
 }
 
 #slide-a .slide-a-a h3 {
@@ -751,14 +752,45 @@ section-career
 }
 
 #career .slick-dots li.slick-active button:before {
-    color: #64FFDA;
+    color: #ff5d93 !important;
 }
 
 #career .slick-dots li button:before {
-    font-size: 36px;
-    content: '•';
-    color: #F0F4C3;
-    opacity: 1;
+    font-size: 25px;
+    /* content: '•'; */
+    content: '\e653'; 
+    color: #e0dede;
+    opacity: 0.7;
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+#career .slick-dots li button:hover {
+    color: #2d3b2f;
+    transform: scale(1.5);
+}
+
+#career .slick-dots #slick-slide03 button:before,
+#career .slick-dots #slick-slide10 button:before,
+#career .slick-dots #slick-slide12 button:before,
+#career .slick-dots #slick-slide21 button:before,
+#career .slick-dots #slick-slide22 button:before,
+#career .slick-dots #slick-slide31 button:before,
+#career .slick-dots #slick-slide33 button:before {
+    content: '\e688'; 
+}
+
+#career .slick-dots #slick-slide00 button:before,
+#career .slick-dots #slick-slide01 button:before,
+#career .slick-dots #slick-slide02 button:before,
+#career .slick-dots #slick-slide03 button:before {
+    color: #98efb9; 
 }
 
 #career .slick-dots li {
