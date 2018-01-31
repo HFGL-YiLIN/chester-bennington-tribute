@@ -153,6 +153,14 @@ $(document).ready(function ($) {
         .addIndicators()
         .addTo(controllerS1);
 
+    // navbar heart color change
+    var $navbarHeart = $(".navbar-heart");
+    var $navbarRight = $(".dropdown");
+
+    $navbarRight.hover(function () {
+        $navbarHeart.css("color", "yellow");
+    });
+
     //early-life 
     //  bar narration
     var tweenFadeinEl1 = new TweenMax.fromTo(".fadeIn-1", 0.5, {
@@ -411,7 +419,7 @@ $(document).ready(function ($) {
             x: -50
         }, {
             opacity: 1,
-            x: 0, 
+            x: 0,
             ease: Power1.easeIn
         });
 
@@ -443,7 +451,7 @@ $(document).ready(function ($) {
     // .setTween(tweenCanvas)
     // .addIndicators()
     // .addTo(controllerS1);
-        
+
     // offerurhelp
     // rain is in html
     // var tweenOfferUr = new TweenMax.staggerFromTo('#offerurhelp .urhelptext', 0.5, {
