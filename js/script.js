@@ -12,10 +12,10 @@ $(document).ready(function ($) {
         .fromTo('.rotate-title', 2.5, {
             opacity: 0
         }, {
-            opacity: 1,
-            ease: Power1.easeIn,
-            delay: 1
-        })
+                opacity: 1,
+                ease: Power1.easeIn,
+                delay: 1
+            })
         .from($tChester, 1.5, {
             y: '-= 120'
         });
@@ -46,7 +46,6 @@ $(document).ready(function ($) {
             $sp.text(t[i]).animate({
                 width: widths[i]
             }, 500, function () {
-                //                TweenLite.to($sp.text(t[i]), 0.5, {width:widths[i], onComplete:function () {
                 TweenLite.to($sp.text(t[i]), 5, {
                     autoAlpha: 1
                 });
@@ -55,7 +54,6 @@ $(document).ready(function ($) {
                     delay: 2.5,
                     onComplete: loop
                 });
-                //            }});
             });
         })();
     });
@@ -102,17 +100,6 @@ $(document).ready(function ($) {
 
     var controllerS1 = new ScrollMagic.Controller();
 
-    // var sceneMutePin = new ScrollMagic.Scene({
-
-    //         triggerElement: '#header',
-    //         duration: 580,
-    //         triggerHook: 'onLeave',
-    //         offset: -10
-    //     })
-    //     .setPin("#mute-1")
-    //     .addIndicators()
-    //     .addTo(controllerS1);
-
     //scrollmagic-section-1
     // title
     var tweenS1Fadeo1 = new TimelineMax()
@@ -128,9 +115,9 @@ $(document).ready(function ($) {
         .fromTo(".year", 0.1, {
             opacity: 0
         }, {
-            opacity: 1,
-            ease: Power1.easeIn
-        })
+                opacity: 1,
+                ease: Power1.easeIn
+            })
         .to(".year", 0.5, {
             autoAlpha: 0,
             scale: 0.7,
@@ -140,8 +127,8 @@ $(document).ready(function ($) {
         .fromTo("#header", 0.8, {
             opacity: 1
         }, {
-            opacity: 0.2
-        });
+                opacity: 0
+            });
 
     var scene1S1Fadeo1 = new ScrollMagic.Scene({
         triggerElement: '#header',
@@ -155,10 +142,14 @@ $(document).ready(function ($) {
 
     // navbar heart color change
     var $navbarHeart = $(".navbar-heart");
-    var $navbarRight = $(".dropdown");
+    var $navbarRight = $(".goldHeart");
+    var originalColors = $navbarHeart.css('color');
 
     $navbarRight.hover(function () {
-        $navbarHeart.css("color", "yellow");
+        $navbarHeart.css("color", "#fdfe00");
+    }, function () {
+        $navbarHeart.css('color', originalColors);
+        // or $navbarHeart.css({'color': originalColors});
     });
 
     //early-life 
@@ -173,23 +164,30 @@ $(document).ready(function ($) {
     var scene4FadeinEl1 = new ScrollMagic.Scene({
         triggerElement: '.bar-1',
         triggerHook: 'onLeave',
-        offset: -150
+        offset: 0
     })
         .setTween(tweenFadeinEl1)
         .addIndicators()
         .addTo(controllerS1);
 
-    var tweenFadeinEl2 = new TweenMax.fromTo(".fadeIn-2", 0.5, {
-        opacity: 0
-    }, {
-            opacity: 1,
-            ease: Power1.easeIn
-        });
+    var tweenFadeinEl2 = new TimelineMax()
+        .fromTo(".bg-img-1", 0.8, {
+            opacity: 1
+        }, {
+                opacity: 0.2
+            })
+        .fromTo(".fadeIn-2", 0.5, {
+            opacity: 0
+        }, {
+                opacity: 1,
+                ease: Power1.easeIn
+            });
 
     var scene5FadeinEl2 = new ScrollMagic.Scene({
         triggerElement: '.bar-2',
         triggerHook: 'onLeave',
-        offset: -450
+        duration: 500,
+        offset: -880
     })
         .setTween(tweenFadeinEl2)
         .addIndicators()
@@ -212,17 +210,24 @@ $(document).ready(function ($) {
         .addIndicators()
         .addTo(controllerS1);
 
-    var tweenFadeinEl4 = new TweenMax.fromTo(".fadeIn-4", 0.5, {
-        opacity: 0
-    }, {
-            opacity: 1,
-            ease: Power1.easeIn
-        });
+    var tweenFadeinEl4 = new TimelineMax()
+        .fromTo(".bg-img-2", 0.8, {
+            opacity: 1
+        }, {
+                opacity: 0.2
+            })
+        .fromTo(".fadeIn-4", 0.5, {
+            opacity: 0
+        }, {
+                opacity: 1,
+                ease: Power1.easeIn
+            });
 
     var scene7FadeinEl4 = new ScrollMagic.Scene({
         triggerElement: '.bar-3',
         triggerHook: 'onLeave',
-        offset: -450
+        duration: 500,
+        offset: -900
     })
         .setTween(tweenFadeinEl4)
         .addIndicators()
@@ -235,12 +240,31 @@ $(document).ready(function ($) {
             ease: Power1.easeIn
         });
 
+
     var scene8FadeinEl5 = new ScrollMagic.Scene({
         triggerElement: '.bar-3',
         triggerHook: 'onLeave',
         offset: 0
     })
         .setTween(tweenFadeinEl5)
+        .addIndicators()
+        .addTo(controllerS1);
+
+    var tweenDark = new TweenMax.fromTo(".bg-img-3", 0.5, {
+        opacity: 1
+    }, {
+            opacity: 0,
+            ease: Power1.easeIn
+        });
+
+
+    var sceneDark = new ScrollMagic.Scene({
+        triggerElement: '.bar-4',
+        triggerHook: 'onLeave',
+        duration: 900,
+        offset: -900
+    })
+        .setTween(tweenDark)
         .addIndicators()
         .addTo(controllerS1);
 
@@ -342,14 +366,14 @@ $(document).ready(function ($) {
         .fromTo("#career", 0.8, {
             opacity: 1
         }, {
-            opacity: 0
-        })
+                opacity: 0
+            })
         .fromTo("#cc-5-1", 0.5, {
             opacity: 0
         }, {
-            opacity: 1,
-            ease: Power1.easeIn
-        })
+                opacity: 1,
+                ease: Power1.easeIn
+            })
         .to("#cc-5-1", 0.5, {
             autoAlpha: 0,
             scale: 0.7,
@@ -366,18 +390,6 @@ $(document).ready(function ($) {
         .setTween(tweenRip1)
         .addIndicators() // add indicators (requires plugin)
         .addTo(controllerS1);
-
-
-
-
-
-
-
-
-
-
-
-
 
     //-----------rip-----------
     function pathPrepare($el) {
@@ -418,10 +430,10 @@ $(document).ready(function ($) {
             opacity: 0,
             x: -50
         }, {
-            opacity: 1,
-            x: 0,
-            ease: Power1.easeIn
-        });
+                opacity: 1,
+                x: 0,
+                ease: Power1.easeIn
+            });
 
     var sceneRipPic = new ScrollMagic.Scene({
         triggerElement: "#rip",
@@ -433,99 +445,56 @@ $(document).ready(function ($) {
         .addIndicators()
         .addTo(controllerS1);
 
-    //     var tweenCanvas = new TweenMax.fromTo(CSSRulePlugin.getRule("#offerurhelp:before"), 0.5,
-    //     {cssRule:{
-    //         y: 0
-    //     }},
-    //     {cssRule:{
-    //         y: 100 
-    //     }}
-    // );
-
-    // var sceneCanvas = new ScrollMagic.Scene({
-    //     triggerElement: '#rain-canvas',
-    //     triggerHook: "onLeave",
-    //     duration: 700,
-    //     offset: -250
-    // })
-    // .setTween(tweenCanvas)
-    // .addIndicators()
-    // .addTo(controllerS1);
-
-    // offerurhelp
-    // rain is in html
-    // var tweenOfferUr = new TweenMax.staggerFromTo('#offerurhelp .urhelptext', 0.5, {
-    //     y: -50,
-    //     x: 50,
-    //     opacity: 0
-    // }, {
-    //         y: 0,
-    //         x: 0,
-    //         opacity: 1
-    //     }, 0.2);
-
     var tweenOfferUr = new TimelineMax()
         .fromTo('#offerurhelp .urhelptext1', 0.5, {
             y: -60,
             x: -20,
             opacity: 0
         }, {
-            y: 0,
-            x: 0,
-            opacity: 1
-        }, 0.2)
+                y: 0,
+                x: 0,
+                opacity: 1
+            }, 0.2)
         .fromTo('#offerurhelp .urhelptext2', 0.5, {
             y: -60,
             x: -20,
             opacity: 0
         }, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            delay: 0.2
-        }, 0.2)
+                y: 0,
+                x: 0,
+                opacity: 1,
+                delay: 0.2
+            }, 0.2)
         .fromTo('#offerurhelp .urhelptext3', 0.5, {
             y: 20,
             x: 60,
             opacity: 0
         }, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            delay: 0.4
-        }, 0.2)
+                y: 0,
+                x: 0,
+                opacity: 1,
+                delay: 0.4
+            }, 0.2)
         .fromTo('#offerurhelp .urhelptext4', 0.5, {
             y: 20,
             x: 60,
             opacity: 0
         }, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            delay: 0.8
-        }, 0.2)
+                y: 0,
+                x: 0,
+                opacity: 1,
+                delay: 0.8
+            }, 0.2)
         .fromTo('#offerurhelp .urhelptext5', 0.5, {
             y: 20,
             x: 60,
             opacity: 0
         }, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            delay: 1
-        }, 0.2);
-
-    // var sceneOfferUr = new ScrollMagic.Scene(
-    //     {
-    //         triggerElement: "#offerurhelp .urhelptext",
-    //         triggerHook: "onLeave",
-    //         offset: -750,
-    //         duration: 500
-    //     }
-    // )
-    //     .setTween(tweenOfferUr)
-    //     .addIndicators()
-    //     .addTo(controllerS1);
+                y: 0,
+                x: 0,
+                opacity: 1,
+                delay: 1
+            }, 0.2);
 
     var sceneOfferUr = new ScrollMagic.Scene(
         {

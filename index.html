@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Tribute: Beloved C. Bennington</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/themify-icons.css">
@@ -31,8 +29,8 @@
         <div class="wheel"></div>
     </div>
 
- 
-    
+
+
     <nav class="navbar navbar-inverse" id="navbar-1">
         <div class="navbar-inner">
             <div class="container">
@@ -59,40 +57,117 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li>
+                        <li class="goldHeart">
                             <a href="#offerurhelp">Offer your help</a>
                         </li>
-                        <!-- <li class="divider-vertical"></li> -->
-                       <li class="navbar-heart"> <i class="ti-heart"></i></li>
-                        <li class="dropdown">
+                        <li class="navbar-heart goldHeart">
+                            <i class="ti-heart"></i>
+                        </li>
+                        <li class="dropdown goldHeart">
+                            <script type="text/javascript">
+                                function popup(url, width, height) {
+                                    var left = (screen.width - width) / 2;
+                                    var top = (screen.height - height) / 2;
+                                    var params = 'width=' + width + ', height=' + height;
+                                    params += ', top=' + top + ', left=' + left;
+                                    newwin = window.open(url, 'windowname5', params);
+                                    if (window.focus) { newwin.focus(); }
+                                    return false;
+                                }
+                            </script>
                             <a class="dropbtn">Share</a>
                             <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <div data-network="facebook" class="share-btn" onclick="popup('https://www.facebook.com/sharer/sharer.php?u=', 550, 400)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <g>
+                                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Like </div>
+                                </div>
+
+
+                                <div data-network="twitter" class="share-btn" onclick="popup('https://twitter.com/share?ref_src=twsrc%5Etfw', 550, 400);">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <g>
+                                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Tweet</div>
+                                </div>
+                                <div data-network="linkedin" class="share-btn" onclick="popup('https://www.linkedin.com/shareArticle?mini=true&url=', 1050, 700)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <g>
+                                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Link</div>
+                                </div>
+                                <div data-network="pinterest" class="share-btn" onclick="popup('http://pinterest.com/pin/create/bookmarklet/?media=&url=&is_video=false&description=test', 1050, 700)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <g>
+                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 19c-.721 0-1.418-.109-2.073-.312.286-.465.713-1.227.87-1.835l.437-1.664c.229.436.895.804 1.604.804 2.111 0 3.633-1.941 3.633-4.354 0-2.312-1.888-4.042-4.316-4.042-3.021 0-4.625 2.027-4.625 4.235 0 1.027.547 2.305 1.422 2.712.132.062.203.034.234-.094l.193-.793c.017-.071.009-.132-.049-.202-.288-.35-.521-.995-.521-1.597 0-1.544 1.169-3.038 3.161-3.038 1.72 0 2.924 1.172 2.924 2.848 0 1.894-.957 3.205-2.201 3.205-.687 0-1.201-.568-1.036-1.265.197-.833.58-1.73.58-2.331 0-.537-.288-.986-.886-.986-.702 0-1.268.727-1.268 1.7 0 .621.211 1.04.211 1.04s-.694 2.934-.821 3.479c-.142.605-.086 1.454-.025 2.008-2.603-1.02-4.448-3.553-4.448-6.518 0-3.866 3.135-7 7-7s7 3.134 7 7-3.135 7-7 7z"
+                                            />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Pin</div>
+                                </div>
+                                <!-- <div data-network="wechat" class="share-btn" onclick="popup('weixin://scanqrcode', 1050, 700)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm5.543 16.389c.889-.644 1.457-1.597 1.457-2.656 0-1.94-1.888-3.514-4.217-3.514-2.329 0-4.217 1.574-4.217 3.514 0 1.941 1.888 3.514 4.217 3.514.481 0 .946-.068 1.377-.192l.124-.019c.081 0 .154.025.224.065l.923.533.081.026c.078 0 .14-.063.14-.14l-.022-.103-.19-.709-.015-.09c0-.094.047-.178.118-.229zm-7.483-10.049c-2.794 0-5.06 1.888-5.06 4.217 0 1.27.682 2.414 1.748 3.187.086.061.142.161.142.275l-.018.107-.228.851-.027.123c0 .093.076.169.169.169l.097-.032 1.108-.639c.083-.048.172-.078.269-.078l.149.022c.516.149 1.074.231 1.651.231l.278-.006c-.11-.329-.17-.675-.17-1.034 0-2.123 2.066-3.845 4.615-3.845l.275.007c-.381-2.015-2.473-3.555-4.998-3.555zm3.317 6.831c-.31 0-.562-.252-.562-.562 0-.311.252-.562.562-.562.311 0 .563.251.563.562 0 .31-.252.562-.563.562zm2.812 0c-.311 0-.562-.252-.562-.562 0-.311.251-.562.562-.562.31 0 .562.251.562.562 0 .31-.252.562-.562.562zm-7.815-3.289c-.373 0-.675-.302-.675-.675 0-.372.302-.674.675-.674.372 0 .674.302.674.674 0 .373-.302.675-.674.675zm3.373 0c-.373 0-.675-.302-.675-.675 0-.372.302-.674.675-.674.373 0 .675.302.675.674 0 .373-.302.675-.675.675z"
+                                                fill-rule="evenodd" clip-rule="evenodd" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Share</div>
+                                </div> -->
+                                <div data-network="tumblr" class="share-btn" onclick="popup('http://www.tumblr.com/share?s=&v=3&u=[URL_GOES_HERE]&u=test', 1050, 700)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                            <g>
+                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.158 17.897c-.459.604-2.004 1.103-3.403 1.103-3.482 0-5.255-1.283-5.255-4.001v-3.592h-1.691l-.059-.059v-2.764l.039-.056.156-.052c1.398-.466 2.296-1.252 2.494-2.873.049-.392.377-.603.663-.603h4.172l.058.059v2.81l.058.059h2.219l.06.059v3.363l-.06.059h-2.229l-.06.059v3.332c.002.09.006.362.096.362h1.909l.057.04.868 2.574-.092.121zm-1.145-1.994l.581 1.721-.014.062c-.438.421-1.49.733-2.35.748l-.098.001c-2.828 0-3.313-2.16-3.313-3.435v-4.106l-.059-.059h-1.622l-.059-.059-.014-1.786.037-.054c1.462-.569 2.278-1.514 2.492-3.263.013-.097.093-.1.094-.1h2.011l.059.059v2.81l.059.059h2.219l.058.059v2.217l-.058.059h-2.229l-.057.059v3.911c.014.839.417 1.265 1.205 1.265.316 0 .65-.074.982-.201l.076.033z"
+                                            />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Share</div>
+                                </div>
+                                <!-- <div data-network="weibo" class="share-btn" onclick="popup('http://www.tumblr.com/share?s=&v=3&u=[URL_GOES_HERE]&u=test', 1050, 700)">
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                                <g>
+                                                        <circle cx="12" cy="12" fill="#D34237" r="11"/><path d="M19.3945,9.4904c0.0639,0.8284,-0.0762,1.821,-0.6232,1.8696c-0.8928,0.0798,-0.4271,-0.9037,-0.4154,-1.4957c0.0327,-1.7159,-1.4321,-2.9081,-2.8669,-2.9081c-0.4065,0,-1.3506,0.2755,-1.2052,-0.5817c0.0654,-0.378,0.3856,-0.3727,0.7062,-0.4154C17.4031,5.6373,19.225,7.2973,19.3945,9.4904L19.3945,9.4904zM15.4475,11.4848c1.0374,0.5676,2.2838,0.8502,2.0771,2.5346c-0.0495,0.4036,-0.2938,0.9429,-0.5399,1.2873c-1.7536,2.4548,-7.0427,3.4866,-10.3456,1.6208c-1.1077,-0.6261,-2.254,-1.5417,-2.0771,-3.3659c0.1522,-1.5699,1.2078,-2.786,2.2437,-3.8219c0.9882,-0.9888,2.0303,-1.7624,3.4483,-2.1189c1.5384,-0.3868,1.9932,0.8958,1.5787,2.1604c0.8911,-0.0598,2.7795,-1.0545,3.6147,-0.083C15.8155,10.1263,15.6745,10.8929,15.4475,11.4848L15.4475,11.4848zM14.3256,15.4731c0.3324,-0.3768,0.6665,-0.9511,0.6644,-1.62c-0.0044,-2.0648,-2.6055,-2.8275,-4.6529,-2.6591c-1.1198,0.0918,-1.8731,0.3282,-2.6591,0.7895c-0.6414,0.3765,-1.3921,0.9891,-1.5787,1.9108c-0.4201,2.0727,1.8343,3.0468,3.4898,3.1575C11.502,17.1805,13.4166,16.5052,14.3256,15.4731zM17.3583,9.4904c0.0871,0.6326,-0.0939,1.1807,-0.4569,1.2049c-0.6052,0.0403,-0.3789,-0.4145,-0.4157,-0.9555c-0.023,-0.3332,-0.2991,-0.718,-0.5402,-0.831c-0.4728,-0.2214,-1.2049,0.1613,-1.2049,-0.4984c0,-0.4898,0.4248,-0.4389,0.665,-0.4572C16.4578,7.8731,17.2356,8.5982,17.3583,9.4904zM12.4976,13.6453c0.8852,2.6753,-3.7268,3.9193,-4.5702,1.6202c-0.5643,-1.5375,0.7907,-2.7604,2.2019,-2.9081C11.3342,12.2311,12.2323,12.8455,12.4976,13.6453zM10.3786,14.1024c0.1878,0.325,0.6197,0.0916,0.5817,-0.166C10.915,13.6382,10.3748,13.6824,10.3786,14.1024zM9.6306,15.5152c0.7754,-0.1846,0.8796,-1.645,-0.2908,-1.3712C8.3566,14.3736,8.5467,15.7727,9.6306,15.5152z"  opacity="1"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Share</div>
+                                </div> -->
+                                <div data-network="email" class="share-btn" onclick="javascript:location.href='mailto:?subject=I wanted you to see this site&amp;body=Check out this site'" >                         
+                                    <div class="share-btn-svg">
+                                        <svg viewBox="0 0 24 24">
+                                                <g>
+                                            <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"
+                                            />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="share-btn-text">Email</div>
+                                </div>
                             </div>
                         </li>
                     </ul>
-                    <!-- <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Career
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="navbar-1">
-                            <li role="presentation">
-                                <a role="menuitem" href="#slide-a-a">A Rising Star</a>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" href="#slide-b">Meteora</a>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" href="#slide-c">A Thousand Suns</a>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" href="#slide-d">Before Collapse</a>
-                            </li>
-
-                        </ul>
-                    </li> -->
 
                 </div>
             </div>
@@ -124,7 +199,6 @@
                     </div>
 
                     <audio autoplay hidden id="player-1">
-                        <source src="audio/Crawling - Linkin Park (Piano Cover Tribute).mp3" type="audio/mp3"> If you're reading this, audio isn't supported.
                     </audio>
 
                     <div id="mute-1">
@@ -146,7 +220,7 @@
             <p class="fadeIn-1">
                 <span class="floatY">1976.3.20</span>Born in
                 <a href="https://www.google.com/maps/place/Phoenix,+AZ/@32.2751887,-114.5141268,5.75z/data=!4m5!3m4!1s0x872b12ed50a179cb:0x8c69c7f8354a1bac!8m2!3d33.4483771!4d-112.0740373"
-                    target="_blank">Phoenix, Ariz</a>. His mother was a nurse, while his father was a police detective. He showed great interest
+                    target="_blank">Phoenix Ariz</a>. His mother was a nurse, while his father was a police detective. He showed great interest
                 in music at a young age and dreamed of becoming a member of
                 <a href="https://en.wikipedia.org/wiki/Stone_Temple_Pilots" target="_blank">Stone Temple Pilots
                 </a>, which he later achieved.</p>
@@ -172,9 +246,9 @@
         </div>
 
         <div class="bg-img bg-img-3">
-            <p class="fadeIn-5">
+            <p class="fadeIn-5 bg-img-3-p1">
                 <span class="floatY">1993</span>Worked at different shops before starting his career as a professional musician.</p>
-            <p class="fadeIn-5">
+            <p class="fadeIn-5 bg-img-3-p2">
                 <span class="float-right">1996</span>Married his first wife, Samantha Marie Olit. The marriage maintained for 9 years. And he married
                 Talinda Ann Bentley in 2006.</p>
         </div>
@@ -193,7 +267,7 @@
                 <div class="container container-slick nopadding">
                     <div class="slick">
                         <div class="item slide-a-a" id="slide-a-a">
-                            <img class="carousel-img" src="img/bg-slide-ps-1-1-13.jpg" alt="Chester in 'Grey Daze'">
+                            <img class="carousel-img" src="img/bg-slide-1-1.jpg" alt="Chester in 'Grey Daze'">
                             <div class="carousel-cap carousel-left verti-center-text" id="cc-1-1">
                                 <h3>
                                     <span class="floatY">1991 </span>When Bennington was 15, he first began singing with a band called Sean Dowdell
@@ -212,7 +286,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-1-2-3-ps-4.jpg" alt="Chester was with other members of 'linkpark'">
+                            <img class="carousel-img" src="img/bg-slide-1-2.jpg" alt="Chester was with other members of 'linkpark'">
                             <div class="carousel-cap carousel-left verti-center-text" id="cc-1-2">
                                 <h3>
                                     <span class="floatY">1999 </span>Was frustrated and almost ready to quit his musical career altogether when he
@@ -231,7 +305,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-1-3-2.jpg" alt="Chester in a live">
+                            <img class="carousel-img" src="img/bg-slide-1-3.jpg" alt="Chester in a live">
                             <div></div>
                             <div class="carousel-cap carousel-left verti-center-text" id="cc-1-3">
                                 <h3 class="verti-bar">
@@ -249,7 +323,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-1-4-5.jpg" alt="Linkin Park's first album: Hybrid Theory">
+                            <img class="carousel-img" src="img/bg-slide-1-4.jpg" alt="Linkin Park's first album: Hybrid Theory">
                             <div class="row-v-1-1 hori-center verti-center">
                                 <iframe class="carousel-video v-1-1" type="text/html" src="https://www.youtube.com/embed/Gd9OhYroLN0?list=PLgwUvJ_atkZIzs0-MA5KVEh9YtwdCRQ5C&amp;enablejsapi=1"
                                     frameborder="0" allowfullscreen></iframe>
@@ -265,7 +339,7 @@
                 <div class="container container-slick nopadding">
                     <div class="slick">
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-2-1-2.jpg" alt="Linkin Park's album: Meteora">
+                            <img class="carousel-img" src="img/bg-slide-2-1.jpg" alt="Linkin Park's album: Meteora">
                             <div class="carousel-cap verti-center-text" id="cc-2-1">
                                 <h3>
                                     <span class="floatY">2003 </span>Gave the vocals for the Linkin Park album,
@@ -282,7 +356,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-2-2-1.jpg" alt="Chester was with other members of 'linkpark'">
+                            <img class="carousel-img" src="img/bg-slide-2-2.jpg" alt="Chester was with other members of 'linkpark'">
                             <div class="carousel-cap verti-center-text" id="cc-2-2">
                                 <h3>Has released the debut album,
                                     <a href="https://en.wikipedia.org/wiki/Out_of_Ashes" target="_blank">Out of Ashes</a> of his own band,
@@ -298,7 +372,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-2-4-1.jpg" alt="Linkin Park's album: Minutes to Midnight">
+                            <img class="carousel-img" src="img/bg-slide-2-4.jpg" alt="Linkin Park's album: Minutes to Midnight">
 
                             <div class="carousel-cap verti-center-text" id="cc-2-3">
                                 <h3>
@@ -319,10 +393,10 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-2-3-3.jpg">
+                            <img class="carousel-img" src="img/bg-slide-2-3.jpg">
                             <div class="wrapper-1">
                                 <div class="row row-padding">
-                                    <img class="img-circle img-responsive round-pic-left" src="img/bg-slide-ps-2-3-2.jpg" alt="Magazine: Hit Parader">
+                                    <img class="img-circle img-responsive round-pic-left" src="img/bg-slide-2-3-1.jpg" alt="Magazine: Hit Parader">
                                     <h3 class="round-text-padding">
                                         <span class="floatY">2007 </span>Has been ranked as No. 46 in the Top 100 Heavy Metal Vocalists by Hit
                                         Parader.
@@ -330,7 +404,7 @@
                                     <a href="http://www.amiannoying.com/(S(duvjwwecmzcwbqyocgxjljio))/collection.aspx?collection=7164" target="_blank" class="btn btn-define">Read More</a>
                                 </div>
                                 <div class="row row-padding">
-                                    <img class="img-circle img-responsive round-pic-right" src="img/bg-slide-ps-2-3-1.jpg" alt="Chester and Jason Statham in the movie Crank">
+                                    <img class="img-circle img-responsive round-pic-right" src="img/bg-slide-2-3-2.jpg" alt="Chester and Jason Statham in the movie Crank">
                                     <h3 class="round-text-padding">
                                         <span class="floatY">2006/2009 </span>Appeared in cameo roles of a pharmacy customer in the American action
                                         film,
@@ -341,7 +415,7 @@
                                     <a href="https://www.youtube.com/watch?v=8WhT5f6aj28" target="_blank" class="btn btn-define">Watch Trailer</a>
                                 </div>
                                 <div class="row row-padding">
-                                    <img class="img-circle img-responsive round-pic-left" src="img/bg-slide-ps-2-3-4.jpg" alt="Chester in the movie">
+                                    <img class="img-circle img-responsive round-pic-left" src="img/bg-slide-2-3-3.jpg" alt="Chester in the movie">
                                     <h3 class="round-text-padding">
                                         <span class="floatY">2010 </span>Played a role in an American 3D horror film
                                         <a href="https://en.wikipedia.org/wiki/Saw_3D" target="_blank">Saw: The Final Chapter</a>.
@@ -359,7 +433,7 @@
                     <div class="slick">
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-3-1-1.jpg" alt="Linkin Park members in star night">
+                            <img class="carousel-img" src="img/bg-slide-3-1.jpg" alt="Linkin Park members in star night">
                             <div class="carousel-cap verti-center-text" id="cc-3-1">
                                 <h3>
                                     <span class="floatY">2010 </span>Gave the vocals for the Linkin Park’s fourth album,
@@ -382,7 +456,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-3-2-7.jpg" alt="Linkin Park's album: A Thousand Suns">
+                            <img class="carousel-img" src="img/bg-slide-3-2.jpg" alt="Linkin Park's album: A Thousand Suns">
                             <div class="row-v-3-1 hori-center verti-center">
                                 <iframe class="carousel-video v-3-1" type="text/html" src="https://www.youtube.com/embed/5qF_qbaWt3Q?list=PLYY0EouQ3GrZdJD73tcgEAFQVQlta40UT&amp;enablejsapi=1"
                                     frameborder="0" allowfullscreen></iframe>
@@ -395,7 +469,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-3-3-3.jpg" alt="Linkin Park's album: Living Things">
+                            <img class="carousel-img" src="img/bg-slide-3-3.jpg" alt="Linkin Park's album: Living Things">
                             <div class="carousel-cap verti-center-text" id="cc-3-3">
                                 <h3>
                                     <span class="floatY">2012 </span>Featured as the lead singer for the Linkin Park’s album,
@@ -419,7 +493,7 @@
                     <div class="slick">
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-4-1-1.jpg" alt="Chester in the Live as the vocal of the band Stone Temple Pilots">
+                            <img class="carousel-img" src="img/bg-slide-4-1.jpg" alt="Chester in the Live as the vocal of the band Stone Temple Pilots">
                             <div class="carousel-cap verti-center-text" id="cc-4-1">
                                 <h3>
                                     <span class="floatY">2013 </span>Has been recruited to replace
@@ -435,7 +509,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-4-2-2.jpg" alt="Linkin Park's album: The Hunting Party">
+                            <img class="carousel-img" src="img/bg-slide-4-2.jpg" alt="Linkin Park's album: The Hunting Party">
                             <div class="carousel-cap verti-center-text" id="cc-4-2">
                                 <h3>
                                     <span class="floatY">2014 </span>Challenged himself for the release of the sixth album
@@ -454,7 +528,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-4-3-1.jpg" alt="Chester with other members of Linkin Park">
+                            <img class="carousel-img" src="img/bg-slide-4-3.jpg" alt="Chester with other members of Linkin Park">
                             <div class="carousel-cap verti-center-text" id="cc-4-3">
                                 <h3>
                                     <span class="floatY">2017 </span>Pushed himself vocally in ways he hadn’t ever before for the new album,
@@ -464,7 +538,7 @@
                         </div>
 
                         <div class="item">
-                            <img class="carousel-img" src="img/bg-slide-ps-4-4-3.jpg" alt="Linkin Park's album: One More Light">
+                            <img class="carousel-img" src="img/bg-slide-4-4.jpg" alt="Linkin Park's album: One More Light">
                             <div class="row-v-4-2 hori-center verti-center">
                                 <iframe class="carousel-video v-4-2" type="text/html" src="https://www.youtube.com/embed/3kaUvGSLMew?list=PLFOacFaV8t9tF-ay6C9U7Xc7fVttcuSVL&amp;enablejsapi=1"
                                     frameborder="0" allowfullscreen></iframe>
@@ -491,7 +565,7 @@
         </div>
 
         <div class="svg">
-            <img class="chester-rip" src="img/chester-rip-ps-4.png" alt="rip chester">
+            <img class="chester-rip" src="img/chester-rip.png" alt="rip chester">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 132">
                 <g fill="none" stroke="#fff" stroke-width=".5" stroke-linecap="round">
                     <path class="rip" d="M85.012 70c-1.375 1.47-.822 4.19-2.702 5.207m2.437-4.865c-.78 1.76-.562 5.147-3.174 4.95-1.218-.278-.048-1.71.194-.74m1.658-3.23c-1.3.68-1.708-.405-.05-1.297 1.09-.622 3.823-.55 3.105 1.274-.313.9-1.496.837-2.26.817m1.322-2.38c1.306.342.866 2.125-.265 2.38m-1.058 0c1.7.117.463 2.422 1.54 3.067m-1.54-3.068c1.59.33.25 3.9 2.33 2.934.217-.148.38-.38.58-.554m3.965-3.968c-.167 2.116 2.234-.11 0-.793-1.474-.47-2.767 1.8-1.057 2.38m.263-2.38c-1.1.477-1.252 1.775-.263 2.38m0 0c-1.898-.456-3.078 2.583-1.06 3.176 1.56.42 3.39-1.78 1.85-2.38-.51-.052-.936.316-1.056.793m-.263-1.588c-1.215.41-2.007 1.992-1.06 2.91m5.558-4.498c-1.117 1.592 1.073 2.24 2.356 1.468 1.686-.395 1.86-3.297.1-1.807-1.11 1.516-.443 4.342-2.41 5.056m2.07-4.45c-.603 1.57.045 4.186-2.384 4.496-2.166.364-1.8-1.23-1.055-.794m9.26-4.234c-.83 1.607-.83 4.653-2.614 4.98m1.028-3.922c-.866 2.052-2.564-.51-.794-1.323 1.086-.298 4.102-.904 2.296.52-.683 1.71-.516 4.908-3.09 4.772-1.907.12-.84-1.576-.294-.78m2.388-4.804c.49-.09.785-.14 1.24.196m8.378.565c-1.274 1.437-.962 4.225-2.978 4.825m3.44-3.97c-.787 1.493-3.74.853-2.645-1.057.56-1.06 3.344-1.028 1.766.784-.807 1.52-.746 4.495-3.09 4.242-1.16-.07-.27-1.335.224-.67m6.658-4.887c-.634 1.897-.9 4.588-2.644 5.557-1.95.422-.707-1.727-.238-.67m2.883-4.886c-.005 1.857.143 3.74.53 5.556m-.53-5.556c.397 1.818.533 3.7.53 5.557m2.928-5.168c1.42 1.105-.71-1.3-1.46.91-.627 1.36-1.125 2.795-1.466 4.256M125.232 70c-1.374 1.47-.903 4.45-2.895 5.26m2.615-4.856c-1.106 1.636-.477 4.988-3.16 4.887-1.55-.376-.02-1.684.166-.63m1.687-3.34c-.658.582-1.642-.458-.11-1.406 1.124-.934 4.006.012 3.166 1.91-.305.832-1.594 1.06-2.26.553m1.058-2.645c1.433.366 1.43 2.544 0 2.91m5.556-2.116c-.03 1.796 2.233-.11 0-.793-1.476-.47-2.77 1.8-1.06 2.38m.266-2.38c-1.255.416-1.254 1.775-.265 2.38m0 0c-1.896-.456-3.076 2.583-1.057 3.176 1.36.556 3.36-1.626 1.848-2.38-.51-.054-.934.314-1.054.79m-.264-1.587c-1.215.41-2.146 1.976-1.06 2.91m8.997-5.292c-1.777 1.63-2.33 4.768-4.767 5.558-1.545-.067-.267-1.603.004-.642m4.762-4.914c-.46 1.83-.82 3.685-1.06 5.556m1.06-5.556l-.794 5.557m-.265 0c.155-1.18-1.25-3.53-2.38-2.38-1.025 1.39 1.953 3.01 3.44 2.114m1.85-4.764c-1.147 1.736 1.45 2.3 2.63 1.59 1.65-.63 2.28-3.015-.22-1.865-1.428 1.068-2.687 3.244-1.88 5.037 1.766 1.463 4.12-.99 2.646-2.116-.49-.316-1.176.167-1.322.793m1.323-3.97c-1.825.85-3.92 3.63-2.644 5.292.177.088.61.378.61.378m7.328-4.876c-.03 1.95 2.233-.11 0-.793-1.476-.47-2.768 1.8-1.058 2.38m.264-2.38c-1.146.51-1.253 1.776-.264 2.38m0 0c-1.898-.455-3.077 2.584-1.06 3.177 1.36.557 3.36-1.625 1.85-2.38-.51-.053-.936.315-1.055.792m-.264-1.59c-1.215.41-2.053 1.406-1.06 2.91m4.766.266c-.143-1.415.666.756-.53 1.058m7.672-6.085c-1.148 1.735 1.45 2.3 2.63 1.59 1.668-.7 1.85-3.044-.22-1.866-1.316 1.194-2.642 3.213-1.88 5.037.78 1.078 3.757-.725 2.645-2.115-.46-.316-1.177.167-1.323.793m1.258-4.006c-1.868.476-3.867 3.5-2.58 5.33.178.087.547.44.793.333m5.028-4.037c-1.37-1.563 2.67-2.733 1.235-.292-.55 1.434-.68 4.214-2.556 4.26-1.233-.333-.09-1.543.166-.626m2.636-4.76c-.706 1.903-.747 3.934-2.196 5.263m.187-1.727c1.59-1.304 6.014-2.043 5.443-3.426-1.198-1.058-2.152 1.804-2.498 2.822-.543 1.874.042 3.607 1.55 1.662m.127-4.623c-1.3 1.17-2.098 3.54-1.594 5.128l.12.24m5.846-4.715c-.045 1.81 2.232-.11 0-.793-1.477-.47-2.77 1.8-1.06 2.38m.265-2.38c-.774.555-1.252 1.775-.263 2.38m0 0c-1.896-.456-3.076 2.583-1.058 3.176 1.36.557 3.36-1.625 1.85-2.38-.51-.053-.937.315-1.057.792m-.265-1.588c-1.216.41-2.04 1.497-1.06 2.91m5.556-4.498c-1.116 1.592 1.12 2.332 2.357 1.468 1.253-.596 2.03-3.127.16-1.946-.876.76-.748 4.26-2.61 5.18m2.21-4.437c-.604 1.57-.342 4.125-2.385 4.497-2.064.705-1.088-1.66-.483-.753m8.69-4.27c-.92 1.614-.78 3.997-2.524 4.964m.936-3.907c-.866 2.052-2.564-.51-.794-1.323 1.086-.298 4.148-.796 2.296.52-.683 1.71-.516 4.908-3.09 4.772-1.545-.128-.62-1.644-.044-.67m2.16-4.886c.44.07 1.076-.077 1.323.264m3.97.528c-.89 2.297 2.233-.11 0-.793-1.476-.47-2.77 1.8-1.06 2.38m.266-2.38c-.777.554-1.255 1.774-.266 2.38m0 0c-1.897-.457-3.077 2.582-1.058 3.175 1.36.557 3.36-1.625 1.848-2.38-.51-.053-.935.315-1.055.792m-.265-1.588c-1.216.41-1.745 1.82-1.06 2.91m7.938-5.028c-1.374 1.47-1 4.196-2.88 5.215m2.538-4.765c-1.03 1.637-.415 4.943-3.097 4.842-1.19-.375-.02-1.6.32-.614m1.533-3.355c-1.12 1.11-1.874-.642-.05-1.297 1.078-.58 3.823-.55 3.105 1.274-.312.9-1.495.838-2.26.818m1.322-2.38c1.307.342.867 2.125-.263 2.38m-1.06 0c1.7.117.662 2.354 1.557 3.082m-1.556-3.082c1.59.33.197 4.108 2.334 2.935.23-.134.463-.353.58-.554m-87.854 7.236c-1.03 1.56-.902 4.03-2.645 4.997m1.057-3.94c-.866 2.053-2.564-.51-.794-1.322 1.086-.297 4.15-.795 2.296.52-.684 1.71-.517 4.91-3.09 4.773-1.546-.128-.69-1.477-.14-.795m2.256-4.76c.442.07.868.3 1.323.263m1.853 1.324c-1.37-1.562 2.798-2.454 1.235-.29-.632 1.433-.46 4.26-2.555 4.26-1.176-.18-.215-1.572.264-.683m2.585-4.502c-.808.85-.615 3.906-2.352 5.11m.296-1.776c1.59-1.304 5.222-1.558 5.29-3.44-.964-1.098-1.98 1.833-2.36 2.85-.59 1.71.06 3.593 1.567 1.648m.208-4.68c-1.35 1.053-1.954 3.388-1.676 5.185l.12.24m7.167-5.508c-1.775 1.63-2.317 4.835-4.766 5.556-1.183-.11-.127-1.52.227-.67m4.54-4.886c-.46 1.828-.817 3.686-1.057 5.556m1.06-5.556l-.796 5.556m-.265 0c.152-1.18-1.59-3.612-2.38-2.38-.44 1.37 1.95 3.01 3.44 2.115m3.965-5.29c-.636 1.895-.862 4.573-2.62 5.54-1.448.186-.386-1.447-.125-.613m2.745-4.928c-.007 1.857.14 3.738.53 5.556m-.53-5.556c.395 1.817.53 3.7.53 5.556m3.065-5.09c.834.98-.656-1.542-1.6.832-.53 1.362-1.125 2.797-1.466 4.258m4.234-3.97c-1.077-1.632 2.897-2.336 1.164-.032-.628 1.374-.548 3.988-2.487 4.003-.9-.236-.09-1.252.25-.683m2.622-4.537c-.733 1.806-.78 3.71-2.36 5.143m4.312-4.89c-.66.987-1.2 1.59-2.446 1.794m3.455-2.046c.875.5-.813-1.004-1.604 1.297-.396.603-1.21.567-1.852.75m0 0c1.7.116.743 2.214 1.54 3.08m-1.54-3.08c1.59.33.293 4.024 2.333 2.934.216-.134.38-.38.578-.554m5.82-3.704c.98-2.178 2.623-.642 1.344 1.264-.264.754-.234.8.072 1.21m.05-3.422c1.138.925-1.685 3.51.65 3.594 1.12-.145 1.573-1.218 2.04-2.117m.563-1.718c-.55 1.61-1.063 3.437-1.98 4.845m1.98-4.845c-.805 1.956-.945 4.767-3.13 5.673-1.856.918-2.52-1.48-1.132-1.17m7.482-4.373c-1.78.868-2.85 3.64-1.59 5.29 2.01 1.452 3.722-2.11 3.44-3.967-.246-2.175-2.412-.19-2.433 1.057-.136.615-.274 1.218-.212 1.853m.135-3.816c-1.043 1.416-2.15 3.652-.507 5.046m4.078-4.406c.834-2.198 2.725-.142 1.493 1.31-.3 1.025-1.164 2.152-.437 3.188m.286-5.382c1.2 1.803-2 3.806-.287 5.382 1.217.337 2.123-1.38 2.667-2.38m1.016-3.242c-.343 1.7-1.687 3.606-1.11 5.283.465.81 1.274-.033 1.66-.455m-.264-4.762c-.35 1.774-1.87 3.774-1.058 5.556m10.054-5.03c-1.03 1.56-.918 4-2.66 4.966m1.073-3.907c-.864 2.053-2.562-.51-.792-1.322.883-.378 4.643-.563 2.457.19-.917 1.72-.5 5.206-3.25 5.102-1.545-.13-.744-1.214-.238-.657m2.355-4.9c.443.07.87.3 1.324.264m-2.38 3.175c.897-.212 3.553-1.85 2.688-.813l-.308 1.076m3.968-3.705c-1.78.87-2.85 3.64-1.588 5.29 2.007 1.296 3.72-2.11 3.44-3.966-.248-2.175-1.976-1.02-2.434 1.057-.136.616-.274 1.22-.212 1.854m.286-3.925c-1.04 1.415-2.192 3.76-.55 5.154m7.672-5.2c-1.29 1.387-1.045 4.197-2.926 5.216m2.64-4.82c-.838 1.65-.472 5-3.153 4.898-1.038-.32-.2-1.488.32-.808M171 82.778c-1.19.79-1.823-.566-.05-1.297 1.11-.652 3.822-.55 3.105 1.276-.313.9-1.496.838-2.262.818m1.323-2.38c1.305.342.865 2.125-.265 2.38m-1.06 0c1.7.117.62 2.135 1.48 3.044m-1.48-3.045c1.59.33.212 3.97 2.335 2.935.215-.148.38-.38.577-.554M75.34 92.174c-1.775 1.63-2.33 4.767-4.765 5.557-1.35.003-.373-1.43.033-.746m4.732-4.81c-.462 1.83-.82 3.686-1.058 5.557m1.058-5.556l-.794 5.557m-.263 0c.154-1.18-1.543-3.497-2.382-2.38-.605 1.19 1.956 3.012 3.44 2.116m2.12-4.498c-1.118 1.592 1.242 2.455 2.356 1.468 1.328-.75 2.2-3.328.098-1.807-1.346 1.445-1.232 4.225-3.032 5.132m2.958-5.058c-1.178 1.63-.805 5.29-3.49 5.06-.802-2.273 1.867-.318 2.7-.033.672.127 1.176-.325 1.584-.793m1.588-3.968c-1.116 1.59 1.29 2.284 2.357 1.467 1.314-.673 1.98-3.337.1-1.807-1.268 1.406-1.186 4.097-2.986 5.102m2.91-5.027c-1.178 1.63-.702 5.277-3.44 5.027-.882-2.063 1.817-.284 2.65 0 .673.126 1.176-.326 1.584-.794m8.992-4.232c-1.03 1.56-.646 3.992-2.63 4.98m1.044-3.922c-.866 2.052-2.564-.51-.794-1.323 1.086-.297 4.148-.795 2.296.52-.683 1.71-.516 4.91-3.09 4.773-1.545-.128-.753-1.608-.137-.707m2.252-4.85c.442.072.868.3 1.323.265m1.852 1.324c-1.37-1.563 2.797-2.455 1.234-.292-.633 1.434-.72 4.32-2.556 4.26-1.03-.31-.237-1.333.275-.764m2.546-4.546c-.657.856-.94 4.615-2.28 5.203m.25-1.745c1.592-1.304 5.903-2.166 5.292-3.424-1.168-.995-2.158 1.798-2.36 2.836-.523 1.773-.022 3.688 1.565 1.647m.112-4.61c-1.302 1.28-1.956 3.435-1.58 5.115l.12.24m5.847-4.714c-.913 2.233 2.234-.11 0-.793-1.475-.47-2.768 1.802-1.058 2.382m.265-2.383c-.776.556-1.254 1.776-.265 2.382m0 0c-1.897-.458-3.077 2.58-1.058 3.174 1.36.557 3.36-1.625 1.848-2.382-.51-.05-.935.316-1.055.794m-.285-1.72c-1.216.41-2.047 1.938-1.037 3.042m13.23-5.292c-1.776 1.63-2.33 4.767-4.767 5.557-1.5.1-.785-1.465-.062-.747m4.83-4.81c-.46 1.83-.802 3.532-1.042 5.402m1.042-5.402l-.825 5.48m-.218-.078c.153-1.18-1.607-3.15-2.398-2.227-.55.958 1.954 3.014 3.44 2.118m4.764-5.292c-1.03 1.88-1.53 4.445-3.44 5.557-1.357.21-.45-1.495-.02-.61m3.46-4.947c-.445 1.738-.98 3.55-1.057 5.292.284.536.106.16.282.25m.776-5.542c-.292 1.745-1.464 3.927-.775 5.54m3.157-5.54c-.813 1.93-1.983 3.803-3.156 5.54m3.157-5.54c-.444 1.738-1.15 3.47-1.057 5.292.678.608 1.393.02 1.852-.53m-.795-4.762c-.292 1.745-1.218 3.942-.53 5.557m6.88-5.557c-1.774 1.63-2.33 4.767-4.765 5.557-1.35.002-.805-1.508-.066-.707m4.83-4.85c-.46 1.83-.818 3.686-1.058 5.557m1.058-5.557l-.793 5.557m-.266 0c.154-1.18-1.743-3.394-2.38-2.382-.507 1.35 1.953 3.014 3.438 2.118m6.086-4.762c-.98 1.845-1.19 4.602-3.703 5.027m1.852-3.97c-.867 2.053-2.565-.51-.795-1.322.83-.334 4.45-.655 2.646.266-.665 1.894-.895 4.515-3.433 4.973-2.35.766-1.483-2.147.176-.44.854.79 2.315.643 2.993-.3m-.793-4.762c.44.07.867.3 1.32.264m4.076.394c-1.258 1.464-1.25 3.908-3.016 4.897m3.44-3.97c-.788 1.492-3.908.77-2.646-1.057.652-1.02 3.386-.986 1.767.784-.68 1.576-.79 4.645-3.09 4.243-1.093-.263-.196-1.334.375-.61m6.506-4.947c-.635 1.897-1 4.44-2.645 5.557-1.504.242-.965-1.436-.137-.668m2.783-4.89c-.006 1.858.14 3.74.53 5.558m-.53-5.557c.297 1.896.53 3.7.53 5.557m3.08-5.168c.767.8-1.03-1.395-1.613.91-.627 1.36-1.125 2.796-1.467 4.257"
@@ -521,7 +595,7 @@
                 ], 100);
             };
             image.crossOrigin = 'anonymous';
-            image.src = 'img/sun-2-ps-3.jpg';
+            image.src = 'img/sun.jpg';
         }
     </script>
 
@@ -543,19 +617,10 @@
                             <a href="http://www.iasp.info/resources/Crisis_Centres/" target="_blank">International Association For Suicide Prevention (IASP)</a>
                         </em>
                     </h2>
-                    <!-- <span class="urhelptext line-1"></span>
-                        <span class="urhelptext line-2"></span>
-                        <span class="urhelptext line-3"> </span>
-                        <span class="urhelptext line-4"></span> -->
                 </div>
             </div>
         </div>
-        <!-- <div class="rain-text">
-            <h3>texttexttexttexttext</h3>
-            <h3>texttexttexttexttext</h3>
-            <h3>texttexttexttexttext</h3>
-        </div> -->
-        <img id="hope" src="img/sun-2-ps-3.jpg" onload="rain()">
+        <img id="hope" src="img/sun.jpg" onload="rain()">
         <div id="rain-canvas"></div>
     </section>
 
@@ -567,7 +632,7 @@
                 </div>
                 <div class="col-md-1">
                     <a href="https://en.wikipedia.org/wiki/Chester_Bennington" target="_blank">
-                        <img class="chester-logo" src="img/chester-logo-ps-8.png" alt="chester logo">
+                        <img class="chester-logo" src="img/chester-logo.png" alt="chester logo">
                     </a>
                 </div>
                 <div class="col-md-3 spaceleft">
@@ -575,7 +640,7 @@
                 </div>
                 <div class="col-md-1">
                     <a href="http://chester.linkinpark.com/" target="_blank">
-                        <img class="lp-logo" src="img/lp-logo-3-ps-1.png" alt="linkin park logo">
+                        <img class="lp-logo" src="img/lp-logo.png" alt="linkin park logo">
                     </a>
                 </div>
             </div>
@@ -605,9 +670,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSRulePlugin.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
@@ -617,7 +680,6 @@
     <script src="js/rainyday.0.1.2.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/script.js"></script>
-    <!--<script src="js/ScrollToPlugin.js"></script>-->
 </body>
 
 </html>
