@@ -1,6 +1,6 @@
 $(document).ready(function ($) {
 
-    //preloader
+    // preloader
     $(window).ready(function () {
         $('#status').delay().fadeOut();
         $('#preloader').delay().fadeOut();
