@@ -1,10 +1,10 @@
 $(document).ready(function ($) {
 
     //preloader
-    $(window).ready(function () {
-        $('#status').delay().fadeOut();
-        $('#preloader').delay(300).fadeOut('slow');
-    });
+    // $(window).ready(function () {
+    //     $('#status').delay().fadeOut();
+    //     $('#preloader').delay(300).fadeOut('slow');
+    // });
 
     //title appear
     var $tChester = $("#t-chester");
