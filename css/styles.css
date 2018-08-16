@@ -260,7 +260,7 @@ section-header
 
 /*preloader*/
 
-#preloader {
+/* #preloader {
     background: radial-gradient(black 15%, #02000a 60%);
     bottom: 0;
     left: 0;
@@ -288,7 +288,7 @@ section-header
     margin: 0;
     text-align: center;
     top: 65%;
-}
+} */
 
 /*.cover {
     background: transparent !important;
@@ -438,11 +438,11 @@ section-early-life
 /*title bar*/
 
 #early-life div {
+    position: relative;
     z-index: 3;
 }
 
 #early-life a, #career a {
-    color: #F48FB1;
     color: inherit;
     font-weight: bold;
     text-decoration: underline;
@@ -555,6 +555,7 @@ section-early-life
 }
 
 .bar p {
+    font-size: 25px;
     font-family: "Quicksand", sans-serif;
     width: 79%;
     color: #9E9E9E;
@@ -565,7 +566,7 @@ section-early-life
 
 .bar .floatY {
     float: right;
-    padding: 30px 0 0 0;
+    padding: 37px 0 0 0;
     line-height: 75%;
     color: #f7f7f7;
 }
@@ -889,11 +890,11 @@ section-career
 }
 
 #career .slick-dots li button:before {
-    font-size: 25px;
+    font-size: 35px;
     /* content: '•'; */
     content: '\e652';
-    color: #767676;
-    opacity: 0.6;
+    color: #77cbcc;
+    opacity: 0.5;
     font-family: 'themify';
     speak: none;
     font-style: normal;
@@ -1168,7 +1169,6 @@ section-footer
 }
 
 .chester-logo {
-    /* max-width: 45%; */
     width: 150px;
     height: 150px;
 }
