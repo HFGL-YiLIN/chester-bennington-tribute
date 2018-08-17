@@ -137,7 +137,7 @@ $(document).ready(function ($) {
         offset: 50
     })
         .setTween(tweenS1Fadeo1)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     // navbar heart color change
@@ -167,7 +167,7 @@ $(document).ready(function ($) {
         offset: 0
     })
         .setTween(tweenFadeinEl1)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenFadeinEl2 = new TimelineMax()
@@ -190,7 +190,7 @@ $(document).ready(function ($) {
         offset: -880
     })
         .setTween(tweenFadeinEl2)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     //
@@ -207,7 +207,7 @@ $(document).ready(function ($) {
         offset: 0
     })
         .setTween(tweenFadeinEl3)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenFadeinEl4 = new TimelineMax()
@@ -230,7 +230,7 @@ $(document).ready(function ($) {
         offset: -900
     })
         .setTween(tweenFadeinEl4)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenFadeinEl5 = new TweenMax.fromTo(".fadeIn-5", 0.5, {
@@ -247,7 +247,7 @@ $(document).ready(function ($) {
         offset: 0
     })
         .setTween(tweenFadeinEl5)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenDark = new TweenMax.fromTo(".bg-img-3", 0.5, {
@@ -265,7 +265,7 @@ $(document).ready(function ($) {
         offset: -900
     })
         .setTween(tweenDark)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     //career 
@@ -313,7 +313,7 @@ $(document).ready(function ($) {
     })
         .setPin(".container-pin")
         .setTween(tweenSlide)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
 
@@ -326,7 +326,7 @@ $(document).ready(function ($) {
         offset: 60
     })
         .setTween(tweenZidx)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
 
@@ -337,7 +337,7 @@ $(document).ready(function ($) {
         triggerHook: 'onLeave',
         offset: -700
     })
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1)
         .on("enter leave", function () {
 
@@ -352,7 +352,7 @@ $(document).ready(function ($) {
         triggerHook: 'onLeave',
         offset: 500
     })
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1)
         .on("enter leave", function () {
 
@@ -388,7 +388,7 @@ $(document).ready(function ($) {
         duration: 700
     })
         .setTween(tweenRip1)
-        .addIndicators() // add indicators (requires plugin)
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controllerS1);
 
     //-----------rip-----------
@@ -422,7 +422,7 @@ $(document).ready(function ($) {
         tweenChanges: true
     })
         .setTween(tweenRip2)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenRipPic = new TimelineMax()
@@ -442,7 +442,7 @@ $(document).ready(function ($) {
         duration: 320
     })
         .setTween(tweenRipPic)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     var tweenOfferUr = new TimelineMax()
@@ -505,7 +505,7 @@ $(document).ready(function ($) {
         }
     )
         .setTween(tweenOfferUr)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controllerS1);
 
     //start the slider
