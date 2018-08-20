@@ -468,19 +468,20 @@ section-early-life
     background-size: cover;
 }
 
+.bg-img-1, .bg-img-2, .bg-img-3 {
+    min-height: 1010px;
+}
+
 .bg-img-1 {
     background-image: url("../img/bg-1.jpg");
-    min-height: 1010px;
 }
 
 .bg-img-2 {
     background-image: url("../img/bg-2.jpg");
-    min-height: 1010px;
 }
 
 .bg-img-3 {
     background-image: url("../img/bg-3.jpg");
-    min-height: 1010px;
 }
 
 .floatY {
@@ -1261,14 +1262,37 @@ media query
 #slide-a h3, #slide-b h3, #cc-3-3 h3, #cc-4-1 h3, #cc-4-3 h3 -> 1.6em */
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1140px) {
     .title h1, .year h1 {
         font-size: 4.7em;
     }
 
     .title h2, .year h2 {
-        font-size: 4em;
+        font-size: 3.7em;
     }
+
+    /* .bg-img p {
+        width: 70%;
+    } */
+
+    .bar p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #slide-a h3, #slide-b h3, #cc-2-3 h3, #cc-3-3 h3, #cc-4-1 h3, #cc-4-3 h3, bar p, .bar .floatY {
+        font-size: 1.3em;
+    }
+
+    .carousel-cap .floatY, .carousel-cap h3, .bg-img .floatY, .float-right, .bg-img p {
+        font-size: 1.6em; 
+    }
+
+    .bg-img-1, .bg-img-2, .bg-img-3 {
+        min-height: 790px;
+    }
+
+
 }
 
 @media only screen and (max-width: 768px) {
