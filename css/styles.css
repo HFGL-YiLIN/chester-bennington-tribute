@@ -307,7 +307,7 @@ section-header
     font-size: 4em;
 }
 
-#slide-a h3, #slide-b h3, #cc-2-3 h3, #cc-3-3 h3, #cc-4-1 h3, #cc-4-3 h3, bar p, .bar .floatY  {
+#slide-a h3, #slide-b h3, #cc-2-3 h3, #cc-4-1 h3, #cc-4-3 h3, bar p, .bar .floatY {
     font-size: 1.6em;
 }
 
@@ -344,7 +344,6 @@ section-header
 
 .title h1 {
     /*margin: 0 auto; */
-    
     font-family: 'Anton', sans-serif;
     /*width: 100%;*/
     /*text-align: center; */
@@ -643,7 +642,7 @@ section-career
 }
 
 .carousel-img {
-    margin-left: -0.3%;
+    /* margin-left: -0.3%; */
     /* width: 100%;
     height: 100%; */
 }
@@ -758,8 +757,6 @@ section-career
 .carousel-right {
     right: 3.7%;
 }
-
-
 
 .carousel-cap h3 {
     line-height: 1.8em;
@@ -1135,7 +1132,7 @@ section-footer
     /* font-size: 20px; */
     text-transform: uppercase;
     margin-top: 2%;
-    position: relative; 
+    position: relative;
     /* background-color: #C2185B; */
 }
 
@@ -1262,120 +1259,103 @@ media query
 .title h2, .year h2 -> 4em
 #slide-a h3, #slide-b h3, #cc-3-3 h3, #cc-4-1 h3, #cc-4-3 h3 -> 1.6em */
 
+@media only screen and (min-width: 1660px) {
+    .carousel-img {
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 1340px) {
     .title h1, .year h1 {
         font-size: 4.7em;
     }
-
     .title h2, .year h2 {
         font-size: 3.7em;
     }
-
     /* .bg-img p {
         width: 70%;
     } */
-
     .bar p {
         font-size: 18px;
         width: 100%;
     }
-
     #slide-a h3, #slide-b h3, #cc-2-3 h3, #cc-3-3 h3, #cc-4-1 h3, #cc-4-3 h3, bar p, .bar .floatY {
         font-size: 1.3em;
     }
-
     .carousel-cap .floatY, .carousel-cap h3, .bg-img .floatY, .float-right, .bg-img p {
-        font-size: 1.6em; 
+        font-size: 1.6em;
     }
-
     .bg-img-1, .bg-img-2, .bg-img-3 {
         min-height: 790px;
     }
-
     #career .carousel-img {
         margin-left: -15%;
     }
-
     /* #career #bg-slide-1-3 {
         margin-left: 0;
     } */
-
     #career #bg-slide-1-4 {
         margin-left: -23%;
     }
-
     #career #bg-slide-2-2 {
         margin-left: -40%;
     }
-
     #career #bg-slide-3-2 {
         margin-left: -23%;
     }
-
     #career #bg-slide-3-3 {
         margin-left: -28%;
     }
-
-    #cc-2-1 {
-        top: 15%; 
+    #cc-1-3 {
+        left: 9%;
+        top: 13%;
     }
-
+    #cc-2-1 {
+        top: 15%;
+    }
     #cc-2-3 {
         top: 12%;
-        left: 13%; 
+        left: 13%;
     }
-
     #cc-3-1 {
         top: 8%;
     }
-
     #cc-3-3 {
         font-size: 0.9em;
-        top: 20%; 
+        top: 20%;
     }
-
     #cc-4-2 {
-        top: 15%; 
+        top: 15%;
     }
-
     .row-v-2-1 {
         bottom: -5%;
     }
-
     .row-v-2-2 {
         left: 28%;
     }
-
     .row-padding img {
-            width: 28%;
+        width: 28%;
     }
-
     .wrapper-1 {
         bottom: 85%;
     }
-
     .chester-rip {
         margin: 47% 0px 0px 6%;
         width: 23%;
     }
-
     .svg svg {
         width: 75%;
         margin: 30% 0 0 19%;
     }
-
     #offerurhelp .raintext h2 {
-        font-size: 0.6em; 
+        font-size: 0.6em;
     }
-
 }
 
 @media only screen and (max-width: 768px) {
     .title h1, .year h1 {
         font-size: 3.7em;
     }
-
     .title h2, .year h2 {
         font-size: 3em;
     }
@@ -1385,11 +1365,9 @@ media query
     .title h1, .year h1 {
         font-size: 2.7em;
     }
-
     .title h2, .year h2 {
         font-size: 2em;
     }
-
     .bg-img p, .bar p {
         font-size: 1.2em;
     }
@@ -1402,7 +1380,6 @@ media query
     .title h1, .year h1 {
         font-size: 2.5em;
     }
-    
     .title h2, .year h2 {
         font-size: 2em;
     }
