@@ -1,0 +1,20 @@
+{
+  "name": "chester-bennington-tribute",
+  "version": "1.0.0",
+  "description": "This is a self-made tribute website in memory of Chester Bennington. R.I.P",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HFGL-YiLIN/chester-bennington-tribute.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HFGL-YiLIN/chester-bennington-tribute/issues"
+  },
+  "homepage": "https://github.com/HFGL-YiLIN/chester-bennington-tribute#readme"
+}
