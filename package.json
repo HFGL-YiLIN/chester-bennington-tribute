@@ -2,9 +2,9 @@
   "name": "chester-bennington-tribute",
   "version": "1.0.0",
   "description": "This is a self-made tribute website in memory of Chester Bennington. R.I.P",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/HFGL-YiLIN/chester-bennington-tribute/issues"
   },
-  "homepage": "https://github.com/HFGL-YiLIN/chester-bennington-tribute#readme"
+  "homepage": "https://github.com/HFGL-YiLIN/chester-bennington-tribute#readme",
+  "dependencies": {
+    "uglify-es": "^3.3.9"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
 }
