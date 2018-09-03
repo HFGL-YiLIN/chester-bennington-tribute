@@ -322,7 +322,7 @@ section-header
 
 /*title*/
 
-#header {
+.header-main {
     /* position: relative;
     display: block; */
     height: 120em;
@@ -330,11 +330,27 @@ section-header
     /*width: 100%;*/
     margin: 0 auto;
     background-image: url(../img/chester.jpg);
-    background-position: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     z-index: 3;
+}
+
+.lovedonation {
+    color: #FFFF00;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/chester.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    z-index: 3;
+}
+
+#loveform {
+    padding-top: 15%;
 }
 
 .title, .year {

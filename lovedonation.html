@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124593789-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta property="og:url" content="https://hfgl-yilin.github.io/chester-bennington-tribute/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A Tribute of Chester Bennington" />
+    <meta property="og:description" content="A self-made Tribute Website of Chester Bennington via HFGL-YiLIN" />
+    <meta property="og:image" content="https://hfgl-yilin.github.io/chester-bennington-tribute/img/chester-fb.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Love Donation</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Tangerine|Roboto|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Saira+Extra+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+
+    <div id="header" class="lovedonation">
+        <div class="container-fluid">
+            <div  id="loveform" class="row">
+                <div class="col-md-3 offset-md-2">
+                    <form  action="https://getform.org/f/ca9c03ec-fabd-4324-88ee-2381e50a2f33" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstname">First Name</label>
+                                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" class="form-control" id="address" placeholder="1234 Main St" required>
+                            <div class="invalid-feedback">
+                                Please enter your address.
+                            </div>
+                        </div>
+
+                        <hr class="mb-4">
+
+                        <div class="row align-items-center">
+                            <div class="col-md-1 mb-3">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="col-md-7 mb-3 text-center">
+                                <label for="donation">How many LOVEs to donate: </label>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                               <input type="number" name="number" class="form-control" id="howmany" placeholder="1000" required>
+                                <div class="invalid-feedback">
+                                    Please enter a number of LOVEs.
+                                </div>
+                            </div>
+                            <div class="col-md-1 mb-3">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                        </div>
+
+                        <hr class="mb-4">
+
+                        <button  id="showlove" class="btn btn-primary btn-lg btn-block" type="submit">Confirm Donation</button>
+
+                        <hr class="mb-4">
+
+                        <button class="btn btn-info btn-lg btn-block" type="button">How many LOVEs we got?</button>
+
+                        <p id="lovetext"></p>
+                        <!-- </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('showlove').onclick(function() {
+        req = new XMLHttpRequest(); 
+        req.open("POST", 'https://getform.org/form/get/ca9c03ec-fabd-4324-88ee-2381e50a2f33', true); //#endregion
+        req.setRequestHeader('ContentType', 'text/plain');
+        req.onreadystatechange = function(){
+            if(req.readyState === 4 && req.status === 200) {
+                document.getElementById('lovetext')[0].innerHTML = req.responseText; 
+                console.log('ok');
+            }
+            else console.log('bad');
+        };
+    });
+});
+    </script>
+</body>
+
+</html>
