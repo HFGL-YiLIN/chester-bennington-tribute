@@ -340,7 +340,6 @@ section-header
 .lovedonation {
     color: #FFFF00;
     height: 100%;
-    width: 100%;
     background-image: url(../img/chester.jpg);
     background-position: 100% 100%;
     background-repeat: no-repeat;
@@ -350,7 +349,8 @@ section-header
 }
 
 #loveform {
-    padding-top: 15%;
+    /* padding-top: 15%; */
+    /* position: fixed; */
 }
 
 .title, .year {
