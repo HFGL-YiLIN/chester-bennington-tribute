@@ -326,7 +326,7 @@ section-header
 
 #ribbon-container {
     position: fixed;
-    right: -19.2%;
+    right: -22.6em;
     /* right: 5.8%; */
     top: 5%;
     padding: 4em;
@@ -339,7 +339,7 @@ section-header
 }
 
 #ribbon-container:hover {
-    right: -3.5%;
+    right: -4.6em;
 }
 
 #ribbon {
@@ -478,7 +478,7 @@ section-header
 }
 
 .lovedonation {
-    color: #ff5400;
+    color: #ffff00;
     font-family: cursive;
     height: 100%;
     background-image: url(../img/sun.jpg);
@@ -489,28 +489,42 @@ section-header
     /* z-index: 3; */
 }
 
-#loveform {
-    width: 30%;
-    margin: 10% 0 0 10%;
+#donation-form {
+    width: 70%;
+    margin: 20% 0 0 14%;
     left: 0;
     right: 0;
     position: absolute;
 }
 
 #reply {
-    font-size: 2.5em;
-    right: 7%;
-    top: 30%;
-    position: absolute;
-    color: #ff90b7;
+    font-size: 1.1em;
     font-family: 'Indie Flower', cursive;
 }
 
-.donationtitle {
-    margin: 12%;
-    color: #FFfF00;
+#donation-title {
+    font-size: 2.5em;
+    margin: 5%;
+    color: #ffffbf;
+    font-family: 'Indie Flower', cursive;
 }
 
+#donation-form .with-errors {
+    color: #ff4545; 
+    width: 110%;
+}
+
+#btn-send {
+  /* margin: 0 155px 25px 0;  */
+  width: 220px; 
+}
+
+#reminder {
+    font-size: 1.1em;
+    color: #feffbf;
+}
+
+/* title */
 .title, .year {
     position: fixed;
     top: 35%;
